@@ -6,7 +6,7 @@ import OurClients from "../components/our_clients";
 import Services from "./services";
 import UserExperienceAndDesign from "./user_exp_design";
 import WebMobileApplicationDev from "./web_mob_app_dev";
-import Header from "../work/header";
+import Header from "../components/header";
 
 export default function ServiceMainIndex() {
   return (

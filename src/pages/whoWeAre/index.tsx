@@ -4,7 +4,7 @@ import Footer from "../components/footer";
 import OurClients from "../components/our_clients";
 import UserExperienceAndDesign from "../services/user_exp_design";
 
-import Header from "../work/header";
+import Header from "../components/header";
 import WhoWeAreContent from "./content";
 import VersionApp from "./version_app";
 import WhoWeAre from "./who_we_are";

@@ -1,8 +1,14 @@
 import styles from "../../app/page.module.css";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import OurClients from "../components/our_clients";
+import WhoWeAreContent from "./content";
+import VersionApp from "./version_app";
 
 export default function WhoWeAre() {
   return (
     <>
+    <Header/>
      <div style={{
         backgroundColor:"white",
         minHeight:'100vh'
@@ -19,6 +25,11 @@ export default function WhoWeAre() {
         </div>
       </div>
       </div>
+      <WhoWeAreContent/>
+      <VersionApp/>
+      
+      <OurClients/>
+      <Footer/>
     </>
   );
 }

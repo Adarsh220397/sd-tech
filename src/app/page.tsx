@@ -13,6 +13,12 @@ import MvpIndex from "../pages/startups";
 import Careers from "../pages/careers/careers";
 import CurrentOpennings from "../pages/careers/current_opennings";
 import CareersIndex from "../pages/careers";
+import Main from "../pages/home/home";
+import WhatWeDo from "../pages/home/what_we_do";
+import Header from "../pages/components/header";
+import HomeIndex from "../pages/home";
+import OurClients from "../pages/components/our_clients";
+import Footer from "../pages/components/footer";
 export default function Home() {
   return (
     <main>
@@ -21,7 +27,12 @@ export default function Home() {
    
      {/* <WhoWeAreMainIndex/> */}
  {/* <MvpIndex/> */}
-<CareersIndex/>
+{/* <CareersIndex/> */}
+<Header/>
+<Main/>
+<WhatWeDo/>
+      <OurClients/>
+      <Footer/>
     </main>
   );
 }

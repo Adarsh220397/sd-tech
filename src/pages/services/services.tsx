@@ -1,9 +1,16 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import OurClients from "../components/our_clients";
+import DigitalExpStrategy from "./digital_exp_strategy";
+import UserExperienceAndDesign from "./user_exp_design";
+import WebMobileApplicationDev from "./web_mob_app_dev";
 
 export default function Services() {
   return (
     <>
+    <Header/>
       <div >
         <div className={styles.bgImageForServices}>
           <div className={styles.homeHeaderContent}>
@@ -22,6 +29,11 @@ export default function Services() {
           </div>
         </div>
       </div>
+      <DigitalExpStrategy/>
+      <WebMobileApplicationDev/>
+      <UserExperienceAndDesign/>
+      <OurClients/>
+      <Footer/>
     </>
   );
 }

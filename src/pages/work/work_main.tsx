@@ -1,12 +1,14 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import ContentImagesOne from "./content";
-import Header from "./header";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import OurClients from "../components/our_clients";
 
 export default function Work() {
   return (
     <>
-   
+   <Header/>
       <div >
         <div > 
         {/* className={styles.homeHeader} */}
@@ -34,7 +36,9 @@ export default function Work() {
           </div>
         </div>
       </div>
-     
+      <ContentImagesOne/>
+      <OurClients/>
+      <Footer/>
     </>
   );
 }

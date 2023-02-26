@@ -5,7 +5,7 @@ import OurClients from "../components/our_clients";
 import UserExperienceAndDesign from "../services/user_exp_design";
 import VersionApp from "../whoWeAre/version_app";
 
-import Header from "../work/header";
+import Header from "../components/header";
 import Careers from "./careers";
 import CurrentOpennings from "./current_opennings";
 
