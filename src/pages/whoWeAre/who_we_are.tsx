@@ -11,7 +11,7 @@ export default function WhoWeAre() {
     <Header/>
      <div style={{
         backgroundColor:"white",
-        minHeight:'100vh'
+       
      }}>
       <div>
         <div className={styles.whoWeAreBanner}>
