@@ -54,7 +54,7 @@ export default function Footer() {
               </div>
               <div className={styles.colMd4}>
                 <div className={styles.digitalAddress}>
-                <h5>E-mail: <a href="mailto:hello@studiodiseno.com">hello@studiodiseno.com</a></h5>
+                <h5>E-mail: <a href={"mailto:hello@studiodiseno.com"}>hello@studiodiseno.com</a></h5>
                                     <h5>Contact: <a href="tel:+91 44 42632026"> +91 44 42632026</a></h5>
 
                 </div>
@@ -62,13 +62,13 @@ export default function Footer() {
                                     <h6>India</h6>
                                     <h5>No.108, Theyagaraya Road, T Nagar,</h5>
                                     <h5>Chennai - 17, India.</h5>
-                                    <a href="https://goo.gl/maps/cGemWsnPPi1Ja5G7A" target="_blank">View Map </a>
+                                    <a href={"https://goo.gl/maps/cGemWsnPPi1Ja5G7A"} >View Map </a>
                                 </div>
                                 <div className={styles.physicalAddress}>
                                     <h6>USA</h6>
                                     <h5>186 Princeton Hightstown Rd, Bldg 3,</h5>
                                     <h5>Suite 10, West Windsor, NJ 08550.</h5>
-                                    <a href="https://goo.gl/maps/M1qFmNvrbmgx6tMTA" target="_blank">View Map </a>
+                                    <a href={"https://goo.gl/maps/M1qFmNvrbmgx6tMTA"} >View Map </a>
                                 </div>
               </div>
 
@@ -76,7 +76,7 @@ export default function Footer() {
                             <div className={styles.socialMedia}>
                                     
                                           
-                                                    <a href="https://www.linkedin.com/company/sdtech-india" target="_blank">
+                                                    <a href={"https://www.linkedin.com/company/sdtech-india"} >
                                                     <Image src={linkedIn} alt="facebook" priority />
                                                         
                                                     </a>

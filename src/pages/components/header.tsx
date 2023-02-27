@@ -10,7 +10,7 @@ import brooke from "../../../assets/images/closeIcon.svg";
 export default function Header() {
   
   const [showMe, setShowMe] = useState(false);
-  const [closeMe, setCloseMe] = useState(false);
+
   function toggle(){
     setShowMe(!showMe);
  
@@ -45,9 +45,9 @@ export default function Header() {
               padding: 20,
             }}
           >
-               <Link onClick={toggle} href={''} >
+               <div onClick={toggle}  >
                 <Image src={hamBurger} alt="StudioDiseno" priority />
-      </Link>
+      </div>
       <div style={{
         display: showMe ?"block":"none" 
       }}>
@@ -69,7 +69,7 @@ export default function Header() {
                 {/* <img class="lazy" data-src="https://studiodiseno.com/images/closeIcon.svg" alt="close"> */}
             {/* </a> */}
             <div className={styles.overlayContent}  >
-                <Link href={'/home/home'} >Home</Link>
+                <Link href={'/'} >Home</Link>
                 <Link href={'/services/services'}>Services</Link>
                 <Link href={'/work/work_main'}>Work</Link>
                 <Link href={'/whoWeAre/who_we_are'}>Who We Are</Link>

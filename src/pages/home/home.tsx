@@ -23,7 +23,7 @@ export default function Main() {
             <div className={styles.container}>
               <div className={styles.homeHeaderContentInner}>
                 <h1>
-                WE DON'T JUST DESIGN
+                {"WE DON'T JUST DESIGN"}
                   
                 </h1>
                 <br></br>
@@ -32,7 +32,7 @@ export default function Main() {
                   <hr className={styles.homeHeaderContentInnerBox}></hr>
                 </h1>
                 <p className={styles.homeHeaderContentInnerP}>
-                We are a bunch of smart and passionate people looking to reinvent the possibilities when technology and design meet.
+                {"We are a bunch of smart and passionate people looking to reinvent the possibilities when technology and design meet."}
                 </p>
               </div>
             </div>
@@ -41,10 +41,10 @@ export default function Main() {
           </div>
         </div>
       </div>
-  
+{/*   
 <WhatWeDo/>
       <OurClients/>
-      <Footer/> 
+      <Footer/>  */}
     </>
   );
 }
