@@ -11,11 +11,7 @@ export default function Main() {
     <>
    <Header/>
       <div >
-        <div > 
-        {/* className={styles.homeHeader} */}
-
-       
-        <div >
+    
 
 
         <div className={styles.bgImage}>
@@ -38,8 +34,7 @@ export default function Main() {
           </div>
           </div>
           </div>
-        </div>
-      </div>
+  
 {/*   
 <WhatWeDo/>
       <OurClients/>

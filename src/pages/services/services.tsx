@@ -15,7 +15,7 @@ export default function Services() {
         <div className={styles.bgImageForServices}>
           <div className={styles.homeHeaderContent}>
             <div className={styles.container}>
-              <div className={styles.homeHeaderContentInner}>
+              <div className={styles.serviceHeaderContentInner}>
                 <h1>
                  <div>{'Services'}</div> 
                 

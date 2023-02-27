@@ -82,12 +82,16 @@ paddingRight:'100px',
                 <div className={styles.overlayAddressContent}>
                     <div >
                     <div >
+                    <br></br>
                         <h6>USA</h6>
+                        
                         <p>186 Princeton Hightstown Rd, Bldg 3,</p>
                             <p> Suite 10, West Windsor, NJ 08550</p>
                     </div>
                     <div >
+                      <br></br>
                         <h6>India</h6>
+                      
                         <p>No.108, Theyagaraya Road, T Nagar,</p>
                             <p> Chennai - 17, India.</p>
                     </div>

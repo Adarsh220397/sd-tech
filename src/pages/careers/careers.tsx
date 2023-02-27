@@ -18,10 +18,10 @@ export default function Careers() {
         <div className={styles.homeHeaderServices}>
 
 
-        <div className={styles.bgImageForStartUp}>
+        <div className={styles.bgImageForCareers}>
           <div className={styles.homeHeaderContent}>
             <div className={styles.container}>
-              <div className={styles.homeHeaderContentInner}>
+              <div className={styles.serviceHeaderContentInner}>
                 <h1>
                 Come work with us!
                  

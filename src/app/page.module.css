@@ -23,18 +23,18 @@ width:475px;
   position: relative;
 }
 .homeHeaderContent {
-    position: relative;
-    font-size: 36px;
-    color: #fff;
-    font-family: HelveticaNeueBold;
-
-    padding-bottom: 10px 0;
-    left: 8%;
-    z-index: 9;
-    width: 100%;
-    display: inline-block;
-    margin-bottom: 20px;
-
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  z-index: 9;
+padding-left: 8%;
+}
+.serviceHeaderContent {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  z-index: 9;
+padding-left: 8%;
 }
 /* .homeHeaderContentInner {
   max-width: 430px;
@@ -148,12 +148,49 @@ bottom: -3px;
     min-height: 100vh;
 }
 .bgImageForCareers{
-  background-image: url('https://studiodiseno.com/images/careers-img.png');
+  background-image: url('https://studiodiseno.com/images/services/servicesBG.png');
         width: 100%;
     height: 100%;
     object-fit:fill ;
     background-size: auto;
     min-height: 100vh;
+}
+.contactUsWrap {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.contactUsWrapForm {
+  padding-top: 50px;
+}
+.contactUsWrapForm h3 {
+  position: relative;
+  color: #231f20;
+  font-size: 36px;
+  font-family: HelveticaNeueBold;
+  line-height: 35px;
+  padding-bottom: 35px;
+}
+.contactUsWrapForm h3::after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffd800;
+}
+.contactUsWrapForm h5 {
+  color: #555;
+  font-size: 18px;
+  line-height: 33px;
+  font-family: HelveticaNeueMedium;
+  padding-top: 10px;
+}
+
+.contactUsWrapForm p {
+  font-size: 20px;
+  color: #555;
+  font-family: HelveticaNeueMedium;
 }
 /* .homeHeaderContentInnerP {
   color: #fff;
@@ -184,6 +221,15 @@ margin-inline-end: 0px;
   max-width: 540px;
 }
 
+.tabActive {
+  background-color: rgba(255,216,0,1);
+  box-shadow: 0 5px 21px -3px rgb(255 216 0 / 50%);
+  border: solid 1px rgba(255,216,0,1);
+}
+.tabUnActive {
+  background-color: transparent;
+
+}
 .homeContentInner p {
   color: #fff;
   font-family: HelveticaNeueMedium;
@@ -200,6 +246,15 @@ margin-inline-end: 0px;
   max-width: 540px;
 }
 .homeHeaderContentInner h1:after {
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  background-color: #ffd800;
+}
+.serviceHeaderContentInner h1:after {
   content: "";
   bottom: -3px;
   left: 0;
@@ -718,13 +773,6 @@ align-content: center;
   justify-content: space-between;
   flex-direction: row;
 }
-.container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .col-md-6 {
     -ms-flex: 0 0 50%;
@@ -792,6 +840,16 @@ align-content: center;
     background-size: auto;
     min-height: 100vh;
    
+}
+
+.bgContactUs{
+
+        width: 100%;
+    height: 100%;
+    object-fit:fill ;
+    background-size: auto;
+    min-height: 100vh;
+ 
 }
 .description {
   display: inherit;
@@ -885,6 +943,22 @@ align-content: center;
   border-radius: var(--border-radius);
 }
 
+.overlayAddressContent p {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: HelveticaNeueLight;
+  color: #fff;
+  font-weight: 300;
+  text-align: left;
+}
+.overlayAddressContent h6 {
+  color: #fff;
+  font-size: 14px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
+  text-align: left;
+
+}
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
@@ -964,8 +1038,7 @@ align-content: center;
   line-height: 42px;
   padding-bottom: 10px;
   display: inline-block;
-  margin-bottom: 20px;
-  margin-top: 10%;
+ 
 }
 
 .homeContentInner h1 {
@@ -995,6 +1068,20 @@ align-content: center;
   
 }
 
+.serviceHeaderContentInner h1 {
+  position: relative;
+  font-size: 36px;
+  color: #fff;
+  font-family: HelveticaNeueBold;
+  line-height: 42px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-right: 10px;
+  display: inline-block;
+  line-height: 1.5;
+     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  
+}
 .contactUsRow {
   display: -ms-flexbox;
   display: flex;
@@ -1002,6 +1089,7 @@ align-content: center;
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
+  padding-left:8%
 }
 .contactUsWrapForm h3 {
   position: relative;
@@ -1010,8 +1098,26 @@ align-content: center;
   font-family: HelveticaNeueBold;
   line-height: 35px;
   padding-bottom: 35px;
-  top:35%
+  top:15%
   
+}
+
+.spanInfo {
+  color: red;
+  margin: 10px;
+}
+.formTitleH4 {
+  color: #231f20;
+  opacity: 0.5;
+  font-size: 18px;
+  font-family: HelveticaNeueMedium;
+}
+.groupTitle {
+  display: flex;
+  align-items: center;
+}
+.checkboxGroup {
+  padding: 30px 0;
 }
 .contactUsWrapForm p {
   font-size: 20px;
@@ -1019,7 +1125,35 @@ align-content: center;
   font-family: HelveticaNeueMedium;
   margin-top: 10px;
 }
+.chip {
+  /* display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  border-color: #000;
+  border-width: 15px;
+  
+  background-color: #f1f1f1d8; */
 
+
+  color: #231f20;
+  font-size: 14px;
+  font-family: HelveticaNeueMedium;
+  border: 1px solid #d5d5d5;
+  border-radius: 24px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: .5s;
+}
+
+.chip:hover {
+  background-color: #ffd200;
+  transition: 0.5s;
+  border-color: #ffd200;
+}
 .contactUsWrapForm h3::after {
   content: "";
   position: absolute;
@@ -1034,7 +1168,7 @@ align-content: center;
   font-size: 18px;
   line-height: 33px;
   font-family: HelveticaNeueMedium;
-  padding-top: 100px;
+  padding-top: 50px;
   margin-bottom: 10px;
 }
 .currentOpenning {
@@ -1108,6 +1242,20 @@ align-content: center;
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
+}
+.serviceHeaderContentInner p {
+  color: #fff;
+  font-family: HelveticaNeueMedium;
+ 
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  font-size: 16px;
+ 
+}
+.serviceHeaderContentInner  {
+  max-width: 430px;
+ 
 }
 .homeContentInner p {
   color: #fff;
