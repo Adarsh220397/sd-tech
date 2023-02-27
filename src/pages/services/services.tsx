@@ -17,8 +17,8 @@ export default function Services() {
             <div className={styles.container}>
               <div className={styles.homeHeaderContentInner}>
                 <h1>
-                  Services
-                  <hr className={styles.homeHeaderContentInnerBox}></hr>
+                 <div>{'Services'}</div> 
+                
                 </h1>
                 <p>
                   We deliver beautiful products and great experiences that users

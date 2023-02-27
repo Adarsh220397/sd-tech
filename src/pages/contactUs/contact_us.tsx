@@ -15,19 +15,24 @@ export default function ContactUs() {
           <div className={styles.homeHeaderServices}>
             <div className={styles.homeHeaderContent}>
               <div className={styles.container}>
-                <div className={styles.homeHeaderContentInner}>
-                  <h1>
+                <div className={styles.contactUsRow}>
+
+               
+                <div className={styles.contactUsWrapForm}>
+                  
+                  <h3 >
                     We’ve been waiting for you...
-                    <hr className={styles.homeHeaderContentInnerBox}></hr>
-                  </h1>
-                  <p className={styles.homeHeaderContentInnerP}>
+                  
+                  </h3>
+                  <h5>
                     Ready to begin your journey?
-                  </p>
-                  <p className={styles.homeHeaderContentInnerP}>
+                  </h5>
+                  <p >
                     Get Started With Studio Diseno Today!
                   </p>
                 </div>
               </div>
+            </div>
             </div>
           </div>
         </div>

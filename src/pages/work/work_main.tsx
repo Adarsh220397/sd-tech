@@ -23,7 +23,7 @@ export default function Work() {
               <div className={styles.homeHeaderContentInner}>
                 <h1>
                   Work
-                  <hr className={styles.homeHeaderContentInnerBox}></hr>
+                
                 </h1>
                 <p>
                   We deliver beautiful products and great experiences that users

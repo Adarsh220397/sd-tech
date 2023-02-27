@@ -32,10 +32,13 @@ export default function Header() {
             flexDirection: "row",
             columnGap: "300",
             WebkitAlignContent: "space-between",
+paddingLeft:'100px',
+paddingRight:'100px',
+
           }}
         >
           <div className={styles.headerSectionRowColMd6}>
-          <Link  href={"https://nextjs.org"}>
+          <Link  href={"https://studiodiseno.com"}>
             <Image src={logoWhite} alt="StudioDiseno" priority />
             </Link>
           </div>
@@ -69,13 +72,13 @@ export default function Header() {
                 {/* <img class="lazy" data-src="https://studiodiseno.com/images/closeIcon.svg" alt="close"> */}
             {/* </a> */}
             <div className={styles.overlayContent}  >
-                <Link href={'/'} >Home</Link>
-                <Link href={'/services/services'}>Services</Link>
-                <Link href={'/work/work_main'}>Work</Link>
-                <Link href={'/whoWeAre/who_we_are'}>Who We Are</Link>
-                <Link href={'/startups/startups'}>For Startups</Link>
-                <Link href={'/careers/careers'}>Career</Link>
-                <Link href={'/contactUs/contact_us'}>Contact</Link>
+                <Link className={styles.overlayA}  href={'/'} >Home</Link>
+                <Link className={styles.overlayA} href={'/services/services'}>Services</Link>
+                <Link className={styles.overlayA} href={'/work/work_main'}>Work</Link>
+                <Link className={styles.overlayA} href={'/whoWeAre/who_we_are'}>Who We Are</Link>
+                <Link className={styles.overlayA} href={'/startups/startups'}>For Startups</Link>
+                <Link className={styles.overlayA} href={'/careers/careers'}>Career</Link>
+                <Link className={styles.overlayA} href={'/contactUs/contact_us'}>Contact</Link>
                 <div className={styles.overlayAddressContent}>
                     <div >
                     <div >

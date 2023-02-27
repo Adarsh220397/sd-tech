@@ -27,7 +27,7 @@ export default function StartUp() {
               <div className={styles.homeHeaderContentInner}>
                 <h1>
                 For Startups
-                  <hr className={styles.homeHeaderContentInnerBox}></hr>
+                
                 </h1>
                 <p className={styles.homeHeaderContentInnerP}>
                 We extend our assistance to startups with our expertise on product
