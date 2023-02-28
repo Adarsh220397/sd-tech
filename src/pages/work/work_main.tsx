@@ -9,9 +9,8 @@ export default function Work() {
   return (
     <>
    <Header darkLogo={false} pageName={'Work'}/>
-      <div >
-        <div > 
-        {/* className={styles.homeHeader} */}
+      
+    
 
        
         <div className={styles.homeHeaderServices}>
@@ -34,8 +33,8 @@ export default function Work() {
           </div>
           </div>
           </div>
-        </div>
-      </div>
+    
+     \
       <ContentImagesOne/>
       <OurClients/>
       <Footer/>

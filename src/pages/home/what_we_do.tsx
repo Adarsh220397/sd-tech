@@ -2,12 +2,7 @@
 import { useState } from "react";
 import styles from "../../app/page.module.css";
 
-// const WhatWeDo = ()=>{
 
-//     return (
-
-//     );
-//   }
 export default function WhatWeDo() {
   const [tabToggle, setTabToggle] = useState(1);
   return (
