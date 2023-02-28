@@ -76,7 +76,7 @@ padding-left: 8%;
   color: #000;
   padding: 20px 40px;
   width: 100%;
-  /* border: solid 1px #979797; */
+ 
   outline: 0;
   text-align: left;
   cursor: pointer;
@@ -85,6 +85,7 @@ padding-left: 8%;
   line-height: 24px;
   margin-bottom: 30px;
   border-radius: 10px;
+  
 }
 .whatWeDoTabContent {
   float: left;
@@ -192,19 +193,7 @@ bottom: -3px;
   color: #555;
   font-family: HelveticaNeueMedium;
 }
-/* .homeHeaderContentInnerP {
-  color: #fff;
-  font-family: HelveticaNeueMedium;
-  font-weight: 400;
-  line-height: 1.5;
-  text-align: left;
- margin-top: 10px;
-display: block;
-margin-block-start: 1em;
-margin-block-end: 1em;
-margin-inline-start: 0px;
-margin-inline-end: 0px;
-} */
+
 .homeHeaderContentInner p {
   color: #fff;
   font-family: HelveticaNeueMedium;
@@ -220,7 +209,27 @@ margin-inline-end: 0px;
   margin-inline-end: 0px;
   max-width: 540px;
 }
+.headersBG {
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  column-gap: 300;
+  -webkit-box-align: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.headerNormal {
 
+  display: flex;
+  flex-direction: row;
+  column-gap: 300;
+  -webkit-box-align: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.headersBGImg {
+  width: 40px;
+}
 .tabActive {
   background-color: rgba(255,216,0,1);
   box-shadow: 0 5px 21px -3px rgb(255 216 0 / 50%);
@@ -228,7 +237,8 @@ margin-inline-end: 0px;
 }
 .tabUnActive {
   background-color: transparent;
-
+  border: solid 1px #979797;
+    outline: 0;
 }
 .homeContentInner p {
   color: #fff;
@@ -841,7 +851,7 @@ align-content: center;
   margin-left: -15px;
 }
 .header {
-  padding: 10px 0;
+ 
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -903,7 +913,7 @@ align-content: center;
 }
 .overlayContent {
   position: relative;
-  /* top: 10%; */
+  top: 10%;
   left: 100px;
   width: 100%;
   height: calc(100% - 10%);
@@ -912,6 +922,9 @@ align-content: center;
   font-size: 40px;
   top: 15px;
   right: 35px;
+  text-align: right;
+  position: absolute;
+
 }
 .overlayA {
   font-size: 20px;
@@ -932,13 +945,14 @@ align-content: center;
   bottom: 5px;
 }
 .copyRights {
-  /* padding-top: 40px; */
+  padding-top: 40px;
   bottom: 30px;
   font-size: 14px;
   line-height: 18px;
   font-family: HelveticaNeueLight;
   color: #fff;
   font-weight: 300;
+  text-align: left;
 }
 .overlay a {
   padding: 0;
@@ -993,6 +1007,18 @@ align-content: center;
   font-weight: 300;
   text-align: left;
 
+  
+}
+
+.overlayAddressContent a {
+  /* font-size: 14px; */
+  line-height: 18px;
+  font-family: HelveticaNeueLight;
+  color: #fff;
+  font-weight: 300;
+  text-align: left;
+  display: table;
+  transition: .3s;
   
 }
 .overlayAddressContent h6 {

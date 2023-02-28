@@ -10,7 +10,7 @@ import WebMobileApplicationDev from "./web_mob_app_dev";
 export default function Services() {
   return (
     <>
-    <Header/>
+    <Header darkLogo={false}/>
       <div >
         <div className={styles.bgImageForServices}>
           <div className={styles.homeHeaderContent}>

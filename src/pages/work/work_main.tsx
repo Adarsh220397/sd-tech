@@ -8,7 +8,7 @@ import OurClients from "../components/our_clients";
 export default function Work() {
   return (
     <>
-   <Header/>
+   <Header darkLogo={false}/>
       <div >
         <div > 
         {/* className={styles.homeHeader} */}

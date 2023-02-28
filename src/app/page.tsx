@@ -28,7 +28,7 @@ export default function Home() {
      {/* <WhoWeAreMainIndex/> */}
  {/* <MvpIndex/> */}
 {/* <CareersIndex/> */}
-<Header/>
+<Header darkLogo={false}/>
 <Main/>
 <WhatWeDo/>
       <OurClients/>

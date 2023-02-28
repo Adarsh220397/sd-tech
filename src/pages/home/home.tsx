@@ -9,7 +9,7 @@ import WhatWeDo from "./what_we_do";
 export default function Main() {
   return (
     <>
-   <Header/>
+   <Header darkLogo={false}/>
       <div >
     
 
@@ -26,7 +26,7 @@ export default function Main() {
            
              
                 </h1>
-                <p className={styles.homeHeaderContentInnerP}>
+                <p >
                 {"We are a bunch of smart and passionate people looking to reinvent the possibilities when technology and design meet."}
                 </p>
               </div>

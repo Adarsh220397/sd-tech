@@ -9,7 +9,7 @@ import CurrentOpennings from "./current_opennings";
 export default function Careers() {
   return (
     <>
-   <Header/>
+   <Header darkLogo={false}/>
       <div >
         <div > 
         {/* className={styles.homeHeader} */}
@@ -26,7 +26,7 @@ export default function Careers() {
                 Come work with us!
                  
                 </h1>
-                <p className={styles.homeHeaderContentInnerP}>
+                <p >
                 {"We're looking for talented individuals that want to do great work with amazing people."}
                 </p>
               </div>
