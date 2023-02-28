@@ -16,7 +16,7 @@ export default function MvpIndex() {
   return (
     <>
    <div>
-<Header/>
+<Header darkLogo={true}/>
 <StartUp/>
      <ProductIdeation/>
      <UIUXDesign/>

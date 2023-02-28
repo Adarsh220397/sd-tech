@@ -12,7 +12,7 @@ export default function ServiceMainIndex() {
   return (
     <>
    <div>
-<Header/>
+<Header darkLogo={false}/>
    <Services/>
       <DigitalExpStrategy/>
       <WebMobileApplicationDev/>

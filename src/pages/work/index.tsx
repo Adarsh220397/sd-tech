@@ -8,7 +8,7 @@ export default function WorkMainIndex() {
   return (
     <>
    <div>
-   <Header/>
+   <Header darkLogo={false}/>
       <Work/>
       <ContentImagesOne/>
       <OurClients/>

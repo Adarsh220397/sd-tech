@@ -13,7 +13,7 @@ export default function WhoWeAreMainIndex() {
   return (
     <>
    <div>
-<Header/>
+<Header darkLogo={true}/>
 <WhoWeAre/>
       <WhoWeAreContent/>
       <VersionApp/>
