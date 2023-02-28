@@ -14,7 +14,7 @@ export default function CareersIndex() {
   return (
     <>
    <div>
-<Header darkLogo={true}/>
+<Header darkLogo={true} pageName={'Career'}/>
 <Careers />
  <CurrentOpennings/>
       <OurClients/>

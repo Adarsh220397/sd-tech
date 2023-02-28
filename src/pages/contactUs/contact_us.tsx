@@ -7,7 +7,7 @@ import OurClients from "../components/our_clients";
 export default function ContactUs() {
   return (
     <>
-      <Header darkLogo={true}  />
+      <Header darkLogo={true}  pageName={'Contact'}/>
       <div>
         <div>
           <div className={styles.bgContactUs}>

@@ -12,7 +12,7 @@ import UIUXDesign from "./ui_ux_design";
 export default function StartUp() {
   return (
     <>
-   <Header darkLogo={false}/>
+   <Header darkLogo={false}pageName={'Startups'}/>
       <div >
         <div > 
         {/* className={styles.homeHeader} */}

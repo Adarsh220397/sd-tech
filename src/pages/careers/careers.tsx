@@ -9,7 +9,7 @@ import CurrentOpennings from "./current_opennings";
 export default function Careers() {
   return (
     <>
-   <Header darkLogo={false}/>
+   <Header darkLogo={false} pageName={'Career'}/>
       <div >
         <div > 
         {/* className={styles.homeHeader} */}

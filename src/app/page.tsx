@@ -28,7 +28,7 @@ export default function Home() {
      {/* <WhoWeAreMainIndex/> */}
  {/* <MvpIndex/> */}
 {/* <CareersIndex/> */}
-<Header darkLogo={false}/>
+<Header darkLogo={false} pageName={'Home'}/>
 <Main/>
 <WhatWeDo/>
       <OurClients/>

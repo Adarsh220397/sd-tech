@@ -18,6 +18,8 @@ width:475px;
   background-color: rgba(38,38,38,1);
   overflow: hidden;
   transition: .5s;
+
+
 }
 .homeHeader {
   position: relative;
@@ -917,6 +919,7 @@ align-content: center;
   left: 100px;
   width: 100%;
   height: calc(100% - 10%);
+
 }
 .closebtn {
   font-size: 40px;
@@ -932,9 +935,14 @@ align-content: center;
   font-family: HelveticaNeueBold;
 
 }
-.overlayA :hover {
- color:#000;
+.overlayActive {
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: underline !important;
+  font-family: HelveticaNeueBold;
+
 }
+
 .overlayAactive:before {
   content: "";
   width: 100%;
@@ -956,8 +964,8 @@ align-content: center;
 }
 .overlay a {
   padding: 0;
-  /* text-decoration: none;
-  font-size: 24px; */
+  text-decoration: none;
+  /* font-size: 24px; */
   color: #fff;
   display: table;
   transition: .3s;

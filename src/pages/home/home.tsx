@@ -9,7 +9,7 @@ import WhatWeDo from "./what_we_do";
 export default function Main() {
   return (
     <>
-   <Header darkLogo={false}/>
+   <Header darkLogo={false} pageName={'Home'}/>
       <div >
     
 

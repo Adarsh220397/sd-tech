@@ -8,7 +8,7 @@ import VersionApp from "./version_app";
 export default function WhoWeAre() {
   return (
     <>
-    <Header darkLogo={true}/>
+    <Header darkLogo={true} pageName={'WhoWeAre'}/>
      <div style={{
         backgroundColor:"white",
        
