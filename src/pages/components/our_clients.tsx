@@ -25,11 +25,10 @@ export default function OurClients() {
     <>
       <div
         
-        style={{
-          padding: 100,
-        }}
-      >
+       className={styles.ourClientsWrap}
+      > 
         <div
+        className={styles.ourClientContainer}
          
         >
           <div className={styles.ourClientsHeader}>
@@ -46,7 +45,7 @@ export default function OurClients() {
           </div>
 
           <div>
-            <div>
+            <div className={styles.ourClientList}>
               <div className={styles.ourClientListView}>
                 <div
                   style={{

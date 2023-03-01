@@ -550,33 +550,59 @@ align-content: center;
 }
 
 .ourClientsHeader {
-  width: 100%;
-
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
 }
 .ourClientsWrap {
   padding: 60px 0;
-}
-
-.ourClientsDescription {
-  padding-top: 20px;
-}
-.ourClientsWrap .sectionTitle:after {
-  left: 35%;
 }
 .sectionTitle:after {
   content: "";
   width: 44px;
   height: 4px;
   position: absolute;
-  left: -70px;
-  top: 37px;
+  left: 180px !important;
+  top: 45px;
   background-color: #ffd800;
+}
+
+.ourClientsDescription {
+  padding-top: 20px;
+  
+}
+.ourClientsWrap {
+  padding: 60px 0;
+}
+.sectionTitle h1 {
+  font-family: HelveticaNeueBold;
+  font-size: 60px;
+  font-weight: 600;
+}
+.ourClientsDescription p {
+ 
+  text-align: center;
+  margin: 0 auto;
+  
+}
+.ourClientsWrap .sectionTitle:after {
+  left: 35%;
+}
+.ourClientList{
+  box-sizing: border-box;
+  text-align: center;
 }
 .ourClientList img {
   width: 100%;
 }
 .ourClientListView {
   padding: 50px 0;
+  margin: 0 100px;
 }
 .ourClientListViewBox {
   display: flex;
@@ -618,21 +644,15 @@ align-content: center;
 }
 .sectionTitle {
   position: relative;
+  
+  text-align: center;
 }
 .sectionTitle h1 {
   font-family: HelveticaNeueBold;
   font-size: 60px;
   font-weight: 600;
 }
-.sectionTitle:after {
-  content: "";
-  width: 44px;
-  height: 4px;
-  position: absolute;
-  left: -70px;
-  top: 37px;
-  background-color: #ffd800;
-}
+
 
 .footer {
   background-color: #eee;
@@ -925,9 +945,23 @@ font-weight: 500;
   top: 0;
 }
 .sectionTitle {
-
   font-size: 60px;
   font-weight: 600;
+}
+
+.ourClientContainer {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
 }
 .bgImage{
   background-image: url('https://studiodiseno.com/images/homeBackground.jpg');
