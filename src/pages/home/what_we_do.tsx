@@ -9,9 +9,7 @@ export default function WhatWeDo() {
     <>
       <div
         className={styles.main}
-        style={{
-          padding: 100,
-        }}
+    
       >
         <div
           style={{
@@ -20,7 +18,7 @@ export default function WhatWeDo() {
         >
           <section className={styles.whatWeDo}>
             <div className={styles.whatWeDoContainer}>
-              <div className={styles.sectionTitle}>
+              <div className={styles.pageSectionTitle}>
                 <h1>What We Do</h1>
               </div>
               <div className={styles.whatWeDoTab}>
