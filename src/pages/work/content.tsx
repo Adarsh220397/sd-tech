@@ -56,11 +56,7 @@ export default function ContentImagesOne() {
               <h4 className={styles.workWrapListWrapH4}>Digital Music app</h4>
             </div>
           </div>
-          <div
-            style={{
-              paddingBottom: 50,
-            }}
-          ></div>
+     
           <div
             style={{
               display: "flex",
@@ -91,11 +87,7 @@ export default function ContentImagesOne() {
               </h4>
             </div>
           </div>
-          <div
-            style={{
-              paddingBottom: 50,
-            }}
-          ></div>
+       
           <div
             style={{
               display: "flex",
