@@ -31,6 +31,7 @@ export default function Home() {
 <Header darkLogo={false} pageName={'Home'}/>
 <Main/>
 <WhatWeDo/>
+<VersionApp/>
       <OurClients/>
       <Footer/>
     </main>

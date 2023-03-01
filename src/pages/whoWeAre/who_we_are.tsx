@@ -18,7 +18,7 @@ export default function WhoWeAre() {
           <div className={styles.whoWeAreContainer}>
             <div className={styles.whoWeAreBannerContent}>
               <div className={styles.whoWeAreBannerTitle}>
-                        <h1 className={styles.whoWeAreBannerTitleH1}>Who We Are</h1>
+                        <h1 className={styles.whoWeAreBannerTitleH1}>{'Who We Are'}</h1>
                     </div>
             </div>
           </div>
