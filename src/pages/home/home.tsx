@@ -1,16 +1,13 @@
-import Image from "next/image";
 import styles from "../../app/page.module.css";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import OurClients from "../components/our_clients";
-import WhatWeDo from "./what_we_do";
+
 
 export default function Main() {
   return (
     <>
   
-      <div>
-        <div className={styles.bgImage}>
+      <div >
+      <div className={styles.bgImage}>
+  </div>
           <div className={styles.homeHeaderContent}>
             <div className={styles.container}>
               <div className={styles.homeContentInner}>
@@ -28,7 +25,7 @@ export default function Main() {
             </div>
           </div>
         </div>
-      </div>
+   
 
     </>
   );
