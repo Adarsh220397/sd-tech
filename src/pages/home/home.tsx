@@ -16,7 +16,7 @@ export default function Main() {
 
                   <div> {"WE DEFINE EXPERIENCES"}</div>
                 </h1>
-                <p>
+                <p className={styles.homeContentInnerP}>
                   {
                     "We are a bunch of smart and passionate people looking to reinvent the possibilities when technology and design meet."
                   }

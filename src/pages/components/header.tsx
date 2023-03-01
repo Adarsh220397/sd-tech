@@ -140,16 +140,17 @@ console.log('------',scrollY)
                       </div>
                       <div
                         style={{
-                          height: "6px",
+                          height: "10px",
                         }}
                       ></div>
                       <div>
-                        <a href="mailto:hello@studiodiseno.com">
-                          E-mail: hello@studiodiseno.com
-                        </a>
-                        <a href="tel:+91 44 42632026">
-                          Contact: +91 44 42632026{" "}
-                        </a>
+                        <Link href="mailto:hello@studiodiseno.com">
+                     <p> {'E-mail: hello@studiodiseno.com'}</p>     
+                        </Link>
+                        <Link href="tel:+91 44 42632026">
+                        <p> {'Contact: +91 44 42632026'}</p>  
+                         
+                        </Link>
                       </div>
                     </div>
                     <div className={styles.copyRights}>
