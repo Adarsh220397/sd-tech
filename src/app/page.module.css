@@ -847,6 +847,7 @@ align-content: center;
   font-weight: 500;
     line-height: 1.2;
     text-align: left;
+    margin:0;
 }
 .ourProjectNavigation {
   display: flex;
