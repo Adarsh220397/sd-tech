@@ -319,8 +319,8 @@ bottom: -3px;
   
 }
 .whoWeAreContentPara {
-  width: 60%;
-  margin: 0 auto;
+  width: 50%;
+  margin: auto;
 }
 
 .whoWeAreStatatics {
@@ -365,7 +365,7 @@ scrollbar-color: #ffd800;
 }
 
 .whoWeAreGalleryContent {
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 .whoWeAreGalleryContent h3 {
@@ -375,6 +375,7 @@ scrollbar-color: #ffd800;
   line-height: 53px;
   text-align: center;
   display: block;
+  margin: 0;
 font-weight: lighter;
   
 }
@@ -400,6 +401,7 @@ align-content: center;
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
+  margin: 0;
 }
 .whoWeAreContentContainer {
   width: 100%;
