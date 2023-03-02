@@ -177,7 +177,7 @@ export default function ContactUs() {
                   T Nagar, Chennai - 17, India.</h4>
                   <a
                     href="https://goo.gl/maps/cGemWsnPPi1Ja5G7A"
-                    target="_blank"
+                   
                   >
                     View Map{" "}
                   </a>
@@ -189,7 +189,7 @@ export default function ContactUs() {
                   </h4>
                   <a
                     href="https://goo.gl/maps/M1qFmNvrbmgx6tMTA"
-                    target="_blank"
+                   
                   >
                     View Map{" "}
                   </a>
@@ -200,7 +200,7 @@ export default function ContactUs() {
                   
                       <a
                         href="https://www.linkedin.com/company/sdtech-india"
-                        target="_blank"
+                      
                       >
                         <Image src={linkedIn} alt="linkedin" priority />
                       </a>
