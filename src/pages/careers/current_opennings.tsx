@@ -24,7 +24,7 @@ export default function CurrentOpennings() {
                             <div className={styles.apply}>
                                 <h4>apply</h4>
                             </div>
-                            <span className={styles.width}></span>
+                            <div className={styles.width}></div>
                         </div>
                         </a>
                         <a href="./reactjsdeveloper.html" className={styles.currentOpenningList}>
@@ -34,7 +34,7 @@ export default function CurrentOpennings() {
                                 <div className={styles.apply}>
                                     <h4>apply</h4>
                                 </div>
-                                <span  className={styles.width}></span>
+                                <span  className={styles.containerWidth}></span>
                             </div>
                             </a>
                             <a href="./businessanalyst.html" className={styles.currentOpenningList}>

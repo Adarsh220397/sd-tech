@@ -28,7 +28,7 @@ export default function OurClients() {
        className={styles.ourClientsWrap}
       > 
         <div
-        className={styles.ourClientContainer}
+        // className={styles.ourClientContainer}
          
         >
           <div className={styles.ourClientsHeader}>

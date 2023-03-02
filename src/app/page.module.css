@@ -165,6 +165,19 @@ bottom: -3px;
 }
 .contactUsWrapForm {
   padding-top: 50px;
+  padding-left: 100px;
+}
+
+.fileUpload {
+  position: relative;
+}
+
+.inputFieldFullWidth {
+  width: 100%;
+  margin: 20px 0;
+  padding-bottom: 10px;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 .contactUsWrapForm h3 {
   position: relative;
@@ -173,6 +186,7 @@ bottom: -3px;
   font-family: HelveticaNeueBold;
   line-height: 35px;
   padding-bottom: 35px;
+  margin:0
 }
 .contactUsWrapForm h3::after {
   content: "";
@@ -796,6 +810,11 @@ align-content: center;
   font-size: 14px;
   /* margin-bottom: 5px; */
 }
+.physicalAddress h4{
+  font-size: 18px;
+  padding-bottom: 10px;
+  margin: 0;
+}
 .physicalAddress h5 {
   font-size: 16px;
   color: #231f20;
@@ -817,6 +836,7 @@ align-content: center;
   font-size: 14px;
   font-family: HelveticaNeueLight;
   color: #231f20;
+  text-decoration: none;
 }
 .physicalAddress{
   padding-top: 15px;
@@ -830,6 +850,10 @@ align-content: center;
 }
 .socialMedia {
   text-align: right;
+}
+.socialMediaCareerSite {
+  padding-top: 25px;
+  text-align: left;
 }
 .homeHeader {
   position: relative;
@@ -1042,6 +1066,27 @@ font-weight: 500;
   font-weight: 600;
 }
 
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.careerContainer{
+  padding-right: 100px;
+  padding-left: 15px;
+
+}
+
+
+.contactUsWrapFormDetails .virtualAddress a {
+    color: black;
+    padding-top: 10px !important;
+    text-decoration: none;
+
+}
 .ourClientContainer {
   width: 100%;
   padding-right: 15px;
@@ -1361,13 +1406,18 @@ font-weight: 500;
   
 }
 .contactUsRow {
-  display: -ms-flexbox;
+
   display: flex;
-  -ms-flex-wrap: wrap;
+
   flex-wrap: wrap;
   margin-right: -15px;
   margin-left: -15px;
-  padding-left:8%
+  /* padding-left:8% */
+}
+
+.colMd8 {
+  flex: 0 0 66.666667%;
+    max-width: 66.666667%;
 }
 .contactUsWrapForm h3 {
   position: relative;
@@ -1427,6 +1477,134 @@ font-weight: 500;
   transition: .5s;
 }
 
+.spanInfo:hover {
+  background-color: #ffd200;
+  transition: 0.5s;
+  border-color: #ffd200;
+}
+
+.rowInput {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  padding-right:150px;
+}
+.exploreMore {
+  text-align: center;
+}
+
+.exploreMoreContact .exploreMoreanchore {
+  text-align: left;
+}
+.exploreMoreContact input {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+
+ .exploreMoreBlack .exploreMoreanchore a::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #ffd200;
+  transform-origin: left;
+  transition: width 0.25s ease;
+  z-index: -1;
+}
+.exploreMoreBlack .exploreMoreanchore a:hover::after {
+  width: 100%;
+}
+.exploreMoreanchore a {
+  position: relative;
+  overflow: hidden;
+}
+.exploreMoreanchore a {
+  color: #231f20;
+  display: inline-block;
+  padding: 13px 45px;
+  border: 1px solid #ffd200;
+  border-radius: 24px;
+  padding-left: 24px;
+  transition: all ease 0.8s;
+  overflow: hidden;
+}
+.exploreMoreanchore a::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #ffd200;
+  transform-origin: left;
+  transition: width 0.25s ease;
+  z-index: -1;
+}
+.exploreMoreanchore a:hover::after {
+  width: 100%;
+}
+.exploreMoreanchore a:before {
+  content: "";
+  width: 45px;
+  height: 20px;
+  background-image: url(../../assets/images/arrow-right-line.svg);
+  position: absolute;
+  right: -3px;
+  background-repeat: no-repeat;
+  top: 13px;
+}
+ 
+input#sendmessage {
+  display: inline-block;
+  padding: 10px 40px;
+  border: 2px solid #ffd200;
+  border-radius: 24px;
+  overflow: hidden;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: HelveticaNeueMedium;
+}
+
+
+.colInput{
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+ width: 100%;
+ margin-right:100px;
+}
+
+.inputField {
+    padding-bottom: 10px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    padding:0 10px;
+    text-align: left;
+}
+
+.inputField input {
+  border: 0;
+  border-bottom: 0.3px solid #979797;
+  padding-bottom: 12px;
+  background-color: transparent;
+ width:100%;
+  outline: 0;
+  margin-bottom: 10px;
+}
 .chip:hover {
   background-color: #ffd200;
   transition: 0.5s;
@@ -1446,11 +1624,11 @@ font-weight: 500;
   font-size: 18px;
   line-height: 33px;
   font-family: HelveticaNeueMedium;
-  padding-top: 50px;
+  margin: 0;
   margin-bottom: 10px;
 }
 .currentOpenning {
-  padding: 50px 0;
+  padding: 50px 100px;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -1464,6 +1642,24 @@ font-weight: 500;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  
+}
+.contactUsWrapFormDetails {
+  padding-top: 50px;
+  background-color: #ffd800;
+  padding: 36px;
+}
+
+.contactUsWrapFormDetails h3 {
+  padding-bottom: 20px;
+  font-size: 24px;
+  margin: 0;
+}
+.formColMd4 {
+  flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  
+    
 }
 
 .currentOpenninglistWrap {
@@ -1478,6 +1674,7 @@ font-weight: 500;
   cursor: pointer;
   margin-right: 20px;
   padding: 20px;
+
 }
 .line {
   width: 65px;
@@ -1485,15 +1682,37 @@ font-weight: 500;
   background-color: #c6d4d8;
   position: absolute;
 }
-.width {
-  height: 3px;
-  width: 0;
+.containerWidth {
+  height: 3px !important;
   position: absolute;
-  background-color: #ffd800;
+  background-color: #ffd800 !important;
   bottom: 0;
   left: 0;
-  transition: width .5s;
+  transition:  .5s;
+  width: 0;
 }
+.radiobuttonGroup {
+  padding-bottom: 40px;
+}
+.radiobuttonGroup input {
+  visibility: hidden;
+  display: none;
+}
+
+.radiobuttonGroup label {
+  color: #231f20;
+  font-size: 14px;
+  font-family: HelveticaNeueMedium;
+  border: 1px solid #d5d5d5;
+  border-radius: 24px;
+  padding: 8px 24px;
+  cursor: pointer;
+  margin-top: 25px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: .5s;
+}
+
 .currentOpenningList h5 {
   font-family: HelveticaNeueBold;
   font-size: 14px;
@@ -1501,9 +1720,13 @@ font-weight: 500;
   text-transform: uppercase;
   padding-bottom: 20px;
   color: #000;
+  margin:0;
+ 
 }
 .currentOpenningWrap h2 {
   font-family: HelveticaNeueMedium;
+  margin:0;
+  font-size: 32px;
 }
 .apply {
   padding-top: 25px;
@@ -1512,6 +1735,7 @@ font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
   color: #000;
+  margin:0
 }
 .homeHeaderContentInner p {
     color: #fff;
