@@ -428,6 +428,15 @@ align-content: center;
   font-family: HelveticaNeueMedium;
   margin:0;
 }
+.versionAppContainer {
+  flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
 .versionAppDesign {
   padding: 80px 0;
   background-color: #eee;
@@ -435,7 +444,6 @@ align-content: center;
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right;
-  min-height: 100vh;
 }
 .appVersionContainer {
   width: 100%;
@@ -448,16 +456,12 @@ align-content: center;
 .versionAppDesignContentH1 {
   color: #000;
   font-size: 72px;
-  font-family: HelveticaNeueLight;
+  font-family: HelveticaNeueLight !important;
   line-height: 71px;
-  font-weight: lighter;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 66.666667%;
-  flex: 0 0 66.666667%;
- padding-left: 100px;
- padding-right: 100px;
   margin: 0;
+padding-left: 100px;
+  flex: 0 0 66.666667%;
+  font-weight: lighter;
 }
 
 .versionAppDesignContentP {

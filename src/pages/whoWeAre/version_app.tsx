@@ -5,9 +5,9 @@ export default function VersionApp() {
     <>
       <div>
         <div className={styles.versionAppDesign}>
-          <div>
+          <div className={styles.versionAppContainer}>
             <h1 className={styles.versionAppDesignContentH1}>
-              Get the first version App Design for free
+              Get the first version Of App Design for free
             </h1>
             <p className={styles.versionAppDesignContentP}>
               Our Product Realization service enables businesses to quickly and
