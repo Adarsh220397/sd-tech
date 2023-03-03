@@ -1,30 +1,26 @@
 import Image from "next/image";
+import { Suspense } from "react";
 import styles from "../../app/page.module.css";
-import ContentImagesOne from "./content";
-import Header from "../components/header";
 import Footer from "../components/footer";
+import Header from "../components/header";
 import OurClients from "../components/our_clients";
 import Loading from "../loading";
-import { Suspense } from "react";
+import DigitalExpStrategy from "./digital_exp_strategy";
+import UserExperienceAndDesign from "./user_exp_design";
+import WebMobileApplicationDev from "./web_mob_app_dev";
 
-export default function Work() {
+export default function Services() {
   return (
     <>
-       <Suspense fallback={<Loading />}>
-   <Header darkLogo={false} pageName={'Work'}/>
-      
-    
-
-       
-        <div className={styles.homeHeaderServices}>
-
-
+      <Suspense fallback={<Loading />}>
+    <Header darkLogo={false} pageName={'Services'}/>
+      <div >
         <div className={styles.bgImageForServices}>
           <div className={styles.homeHeaderContent}>
             <div className={styles.container}>
               <div className={styles.serviceHeaderContentInner}>
                 <h1>
-                  Work
+                 <div>{'Services'}</div> 
                 
                 </h1>
                 <p>
@@ -34,13 +30,15 @@ export default function Work() {
               </div>
             </div>
           </div>
-          </div>
-          </div>
-    
-     
-      <ContentImagesOne/>
+        </div>
+      </div>
+      <DigitalExpStrategy/>
+      <WebMobileApplicationDev/>
+      <UserExperienceAndDesign/>
       <OurClients/>
       <Footer/>
+
+
       </Suspense>
     </>
   );

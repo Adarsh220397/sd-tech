@@ -1,42 +1,26 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import OurClients from "../components/our_clients";
 import DigitalExpStrategy from "./digital_exp_strategy";
+import Footer from "../components/footer";
+import OurClients from "../components/our_clients";
+import Services from "./services2";
 import UserExperienceAndDesign from "./user_exp_design";
 import WebMobileApplicationDev from "./web_mob_app_dev";
+import Header from "../components/header";
 
-export default function Services() {
+export default function ServiceMainIndex() {
   return (
     <>
-    <Header darkLogo={false} pageName={'Services'}/>
-      <div >
-        <div className={styles.bgImageForServices}>
-          <div className={styles.homeHeaderContent}>
-            <div className={styles.container}>
-              <div className={styles.serviceHeaderContentInner}>
-                <h1>
-                 <div>{'Services'}</div> 
-                
-                </h1>
-                <p>
-                  We deliver beautiful products and great experiences that users
-                  love.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+   <div>
+<Header darkLogo={false} pageName={'Services'}/>
+   <Services/>
       <DigitalExpStrategy/>
       <WebMobileApplicationDev/>
       <UserExperienceAndDesign/>
       <OurClients/>
       <Footer/>
 
-
-      
+   </div>
     </>
   );
 }

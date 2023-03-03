@@ -1,11 +1,11 @@
-import Image from "next/image";
+
 import styles from "../../app/page.module.css";
 
 
 export default function CurrentOpennings() {
   return (
     <>
-   
+ 
       <div >
         <div  className={styles.currentOpenning}> 
         {/* className={styles.homeHeader} */}

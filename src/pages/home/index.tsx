@@ -9,13 +9,13 @@ import UserExperienceAndDesign from "../services/user_exp_design";
 import Header from "../components/header";
 
 import WhatWeDo from "./what_we_do";
+import Main from "./home";
 
 export default function HomeIndex() {
   return (
     <>
    <div>
-{/* <Header/> */}
-{/* <Main/> */}
+   <Header darkLogo={false} pageName={"Home"} /><Main />
 <WhatWeDo/>
       <OurClients/>
       <Footer/>
