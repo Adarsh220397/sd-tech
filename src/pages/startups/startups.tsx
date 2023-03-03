@@ -7,6 +7,7 @@ import VersionApp from "../whoWeAre/version_app";
 import MVP from "./mvp";
 import ProductIdeation from "./product_ideation";
 import UIUXDesign from "./ui_ux_design";
+import WaitingComponent from "./we_have_been_waiting";
 
 
 export default function StartUp() {
@@ -43,6 +44,7 @@ export default function StartUp() {
       <ProductIdeation/>
      <UIUXDesign/>
      <MVP/>
+     <WaitingComponent/>
      <VersionApp/>
       <OurClients/>
       <Footer/>
