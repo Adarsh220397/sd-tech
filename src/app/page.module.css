@@ -27,9 +27,8 @@ width:360px;
 .homeHeaderContent {
   position: absolute;
   top: 40%;
-  /* width: 100%; */
+  width: 100%;
   z-index: 9;
-padding-left: 8%;
 }
 .serviceHeaderContent {
   position: absolute;
@@ -121,10 +120,6 @@ padding-left: 8%;
   padding-left: 15px;
   margin-right: 100px;
   margin-left: 100px;
-}
-.headerSectionRowColMd6 {
-  width: 100%;
- 
 }
 .homeHeaderContentInnerBox {
   content: "";
@@ -231,9 +226,10 @@ bottom: -3px;
   display: flex;
   flex-direction: row;
   column-gap: 300;
+  /* position: absolute; */
   -webkit-box-align: space-between;
-  padding-left: 80px;
-  padding-right: 80px;
+  /* padding-left: 80px;
+  padding-right: 80px; */
 }
 .headerNormal {
 
@@ -241,8 +237,8 @@ bottom: -3px;
   flex-direction: row;
   column-gap: 300;
   -webkit-box-align: space-between;
-  padding-left: 80px;
-  padding-right: 80px;
+  /* padding-left: 80px;
+  padding-right: 80px; */
 }
 .headersBGImg {
   width: 40px;
@@ -513,6 +509,10 @@ align-content: center;
 }
 .homeHeaderContentHome {
   max-width: 520px !important;
+}
+
+.homeHeaderContentHome h1::after {
+  width: 160px;
 }
 .workWrapListWrapH5{
   padding-top: 15px;
@@ -1156,7 +1156,6 @@ font-weight: 500;
   margin-left: -15px;
 }
 .header {
-
   position: fixed;
   width: 100%;
   z-index: 99;
@@ -1172,10 +1171,15 @@ font-weight: 500;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: auto;
+  margin-left: auto;
 }
+@media (min-width: 1200px) {
 
+.container {
+    max-width: 1140px;
+}
+}
 .careerContainer{
   padding-right: 100px;
   padding-left: 15px;
@@ -1769,7 +1773,46 @@ font-weight: 500;
   background-repeat: no-repeat;
   top: 13px;
 }
- 
+@media (max-width: 991px) and (min-width: 768px) {
+  .whatWeDoTabContent {
+    padding: 0 60px;
+    max-width: calc(100% - 250px);  
+  }
+  .whatWeDoTabTab {
+    max-width: 250px;
+  }
+
+  .ourClientsWrap .sectionTitle:after {
+    left: -17px;
+  }
+.footerLogoImg {
+  width: 100%;
+}
+  .servicesListImage {
+    width: 100%;
+  }
+
+  .tabContentInner ul li {
+    float: none;
+    width: 100%;
+  }
+  .whoWeAreContentPara {
+    width: 100%;
+  }
+
+  .whoWeAreStataticsList {
+    border: 0;
+  }
+  .whoWeAreGalleryContent {
+    width: 100%;
+  }
+  .contactUsWrapFormDetails .virtualAddress a {
+    font-size: 12px;
+  }
+  .contactUsWrapFormDetails h4 {
+    font-size: 14px;
+  }
+}
 input#sendmessage {
   display: inline-block;
   padding: 10px 40px;
