@@ -7,20 +7,35 @@ import Services from "./services2";
 import UserExperienceAndDesign from "./user_exp_design";
 import WebMobileApplicationDev from "./web_mob_app_dev";
 import Header from "../components/header";
+import { useState, useEffect } from "react";
+import Loading from "../../app/loading";
 
 export default function ServiceMainIndex() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // fetchData();
+    setLoading(true);
+    setLoading(false);
+    console.log("------------");
+  }, []);
   return (
     <>
-   <div>
-<Header darkLogo={false} pageName={'Services'}/>
-   <Services/>
-      <DigitalExpStrategy/>
-      <WebMobileApplicationDev/>
-      <UserExperienceAndDesign/>
-      <OurClients/>
-      <Footer/>
-
-   </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <div>
+            <Header darkLogo={false} pageName={"Services"} />
+            <Services />
+            <DigitalExpStrategy />
+            <WebMobileApplicationDev />
+            <UserExperienceAndDesign />
+            <OurClients />
+            <Footer />
+          </div>
+        </>
+      )}
     </>
   );
 }

@@ -361,7 +361,7 @@ margin: 0;
   display: flex;
   flex-direction: row;
   
-scrollbar-color: #ffd800;
+scrollbar-color: #ffd800 !important;
 }
 
 .whoWeAreGalleryContent {

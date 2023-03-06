@@ -10,22 +10,36 @@ import MVP from "./mvp";
 import ProductIdeation from "./product_ideation";
 import StartUp from "./startups2";
 import UIUXDesign from "./ui_ux_design";
-
+import { useState, useEffect } from "react";
+import Loading from "@/app/loading";
+import WaitingComponent from "./we_have_been_waiting";
 
 export default function MvpIndex() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // fetchData();
+    setLoading(true);
+    setLoading(false);
+    console.log("------------");
+  }, []);
   return (
     <>
-   <div>
-<Header darkLogo={true} pageName={'Startups'}/>
-<StartUp/>
-     <ProductIdeation/>
-     <UIUXDesign/>
-     <MVP/>
-     <VersionApp/>
-      <OurClients/>
-      <Footer/>
-
-   </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div>
+          <Header darkLogo={true} pageName={"Startups"} />
+          <StartUp />
+          <ProductIdeation />
+          <UIUXDesign />
+          <MVP />
+          <WaitingComponent />
+          <VersionApp />
+          <OurClients />
+          <Footer />
+        </div>
+      )}
     </>
   );
 }

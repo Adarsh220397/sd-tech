@@ -1,27 +1,22 @@
 import Image from "next/image";
-import { Suspense } from "react";
 import styles from "../../app/page.module.css";
-import Footer from "../components/footer";
+import ContentImagesOne from "./content";
 import Header from "../components/header";
+import Footer from "../components/footer";
 import OurClients from "../components/our_clients";
-import DigitalExpStrategy from "./digital_exp_strategy";
-import UserExperienceAndDesign from "./user_exp_design";
-import WebMobileApplicationDev from "./web_mob_app_dev";
+import { Suspense, useEffect, useState } from "react";
 
-export default function Services() {
+export default function Work() {
   return (
     <>
       {/* <Suspense fallback={<Loading />}> */}
-    {/* <Header darkLogo={false} pageName={'Services'}/> */}
-      <div >
+
+      <div className={styles.homeHeaderServices}>
         <div className={styles.bgImageForServices}>
           <div className={styles.homeHeaderContent}>
             <div className={styles.container}>
               <div className={styles.serviceHeaderContentInner}>
-                <h1>
-                 <div>{'Services'}</div> 
-                
-                </h1>
+                <h1>Work</h1>
                 <p>
                   We deliver beautiful products and great experiences that users
                   love.
@@ -31,8 +26,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-
-
 
       {/* </Suspense> */}
     </>

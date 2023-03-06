@@ -1,44 +1,40 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import Footer from "../components/footer";
-import Header from "../components/header";
 import OurClients from "../components/our_clients";
+import UserExperienceAndDesign from "../services/user_exp_design";
+import VersionApp from "../whoWeAre/version_app";
+
+import Header from "../components/header";
+import Careers from "./careers2";
 import CurrentOpennings from "./current_opennings";
+import { useState, useEffect } from "react";
+import Loading from "@/app/loading";
 
+export default function CareersIndex() {
+  const [loading, setLoading] = useState(true);
 
-export default function Careers() {
+  useEffect(() => {
+    // fetchData();
+    setLoading(true);
+    setLoading(false);
+    console.log("------------");
+  }, []);
   return (
     <>
-   <Header darkLogo={false} pageName={'Career'}/>
-      <div >
-        <div > 
-        {/* className={styles.homeHeader} */}
-
-       
-        <div className={styles.homeHeaderServices}>
-
-
-        <div className={styles.bgImageForCareers}>
-          <div className={styles.homeHeaderContent}>
-            <div className={styles.container}>
-              <div className={styles.serviceHeaderContentInner}>
-                <h1>
-                Come work with us!
-                 
-                </h1>
-                <p >
-                {"We're looking for talented individuals that want to do great work with amazing people."}
-                </p>
-              </div>
-            </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <>
+          <div>
+            <Header darkLogo={true} pageName={"Career"} />
+            <Careers />
+            <CurrentOpennings />
+            <OurClients />
+            <Footer />
           </div>
-          </div>
-          </div>
-        </div>
-      </div>
-      <CurrentOpennings/>
-      <OurClients/>
-      <Footer/>
+        </>
+      )}
     </>
   );
 }

@@ -24,7 +24,6 @@ export default function MVP() {
                   style={{
                     verticalAlign: "middle",
                   }}
-            
                   priority
                 />
               </div>
@@ -32,14 +31,14 @@ export default function MVP() {
             <div className={styles.headerSectionRowColMd6}>
               <div className={styles.servicesListDesc}>
                 <div className={styles.tabContentInner}>
-                     <div className={styles.tabContentInnerBlock}>
-                  <h3>MVP</h3>
-                  <p>
-                  Delivering the core functionalities before project
+                  <div className={styles.tabContentInnerBlock}>
+                    <h3>MVP</h3>
+                    <p>
+                      Delivering the core functionalities before project
                       completion with a team of experts would let us know the
                       bigger picture much early.
-                  </p>
-                  <ul>
+                    </p>
+                    <ul>
                       <li>
                         Innovative implementation of the app with basic
                         functionality
@@ -53,7 +52,7 @@ export default function MVP() {
                         launch
                       </li>
                     </ul>
-                </div>
+                  </div>
                 </div>
               </div>
             </div>

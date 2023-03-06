@@ -1,72 +1,39 @@
-import { Router } from "next/router";
-import { useState, useEffect, Suspense } from "react";
+import Image from "next/image";
 import styles from "../../app/page.module.css";
 import Footer from "../components/footer";
-import Header from "../components/header";
 import OurClients from "../components/our_clients";
+import UserExperienceAndDesign from "../services/user_exp_design";
+
+import Header from "../components/header";
 import WhoWeAreContent from "./content";
 import VersionApp from "./version_app";
-import Image from "next/image";
-import loader from "../../../assets/images/loader.gif";
-import Loading from "../loading";
-export default function WhoWeAre() {
+import WhoWeAre from "./who_we_are2";
+import { useState, useEffect } from "react";
+import Loading from "@/app/loading";
 
-  // const [loading, setLoading] = useState(false);
-  // useEffect(() => {
-  //   Router.events.on('routeChangeStart', () => setLoading(true));
-  //   Router.events.on('routeChangeComplete', () => setLoading(true));
-  //   Router.events.on('routeChangeError', () => setLoading(false));
-  //   console.log('---------------');
-  //   return () => {
-  //     Router.events.off('routeChangeStart', () => setLoading(true));
-  //     Router.events.off('routeChangeComplete', () => setLoading(false));
-  //     Router.events.off('routeChangeError', () => setLoading(false));
-  //   };
-  // }, [Router.events]);
+export default function WhoWeAreMainIndex() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setLoading(false);
+    console.log("------------");
+  }, []);
   return (
     <>
-{
-// loading ? 
-    //  <div className={styles.wrapper}>
-    // <Image
-    //                   src={loader}
-    //                   alt="loader"
-    //                   style={{
-    //                     verticalAlign: "middle",
-    //                   }}
-                    
-    //                   priority
-    //                 />
-           
-    //     </div> 
-        // :
-        <Suspense fallback={<Loading />}>
+      {loading ? (
+        <Loading />
+      ) : (
         <div>
-    <Header darkLogo={true} pageName={'WhoWeAre'}/>
-     <div style={{
-        backgroundColor:"white",
-       
-     }}>
-      <div>
-        <div className={styles.whoWeAreBanner}>
-          <div className={styles.whoWeAreContainer}>
-            <div className={styles.whoWeAreBannerContent}>
-              <div className={styles.whoWeAreBannerTitle}>
-                        <h1 className={styles.whoWeAreBannerTitleH1}>{'Who We Are'}</h1>
-                    </div>
-            </div>
-          </div>
+          <Header darkLogo={true} pageName={"WhoWeAre"} />
+          <WhoWeAre />
+          <WhoWeAreContent />
+          <VersionApp />
+
+          <OurClients />
+          <Footer />
         </div>
-      </div>
-      </div>
-      <WhoWeAreContent/>
-      <VersionApp/>
-      
-      <OurClients/>
-      <Footer/>
-      </div>
-      </Suspense>
-    }
+      )}
     </>
   );
 }

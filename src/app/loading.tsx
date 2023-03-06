@@ -8,9 +8,13 @@ export default function Loading() {
     <Image
       src={loader}
       alt="loader"
+      width={60}
+      height={60}
+
       style={{
         verticalAlign: "middle",
       }}
+  
       priority
     />
   </div>

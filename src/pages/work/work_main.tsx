@@ -1,47 +1,33 @@
-import Image from "next/image";
-import styles from "../../app/page.module.css";
-import ContentImagesOne from "./content";
-import Header from "../components/header";
 import Footer from "../components/footer";
 import OurClients from "../components/our_clients";
-import Loading from "../loading";
-import { Suspense } from "react";
+import Header from "../components/header";
+import ContentImagesOne from "./content";
+import Work from "./work_main2";
+import { useState, useEffect } from "react";
+import Loading from "@/app/loading";
 
-export default function Work() {
+export default function WorkMainIndex() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // fetchData();
+    setLoading(true);
+    setLoading(false);
+    console.log("------------");
+  }, []);
   return (
     <>
-       <Suspense fallback={<Loading />}>
-   <Header darkLogo={false} pageName={'Work'}/>
-      
-    
-
-       
-        <div className={styles.homeHeaderServices}>
-
-
-        <div className={styles.bgImageForServices}>
-          <div className={styles.homeHeaderContent}>
-            <div className={styles.container}>
-              <div className={styles.serviceHeaderContentInner}>
-                <h1>
-                  Work
-                
-                </h1>
-                <p>
-                  We deliver beautiful products and great experiences that users
-                  love.
-                </p>
-              </div>
-            </div>
-          </div>
-          </div>
-          </div>
-    
-     
-      <ContentImagesOne/>
-      <OurClients/>
-      <Footer/>
-      </Suspense>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div>
+          <Header darkLogo={false} pageName={"Work"} />
+          <Work />
+          <ContentImagesOne />
+          <OurClients />
+          <Footer />
+        </div>
+      )}
     </>
   );
 }

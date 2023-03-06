@@ -10,17 +10,33 @@ import Header from "../components/header";
 
 import WhatWeDo from "./what_we_do";
 import Main from "./home";
+import { useState, useEffect } from "react";
+import Loading from "@/app/loading";
+import OurWork from "./our_work";
 
 export default function HomeIndex() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // fetchData();
+    setLoading(true);
+    setLoading(false);
+    console.log("------------");
+  }, []);
   return (
     <>
-   <div>
-   <Header darkLogo={false} pageName={"Home"} /><Main />
-<WhatWeDo/>
-      <OurClients/>
-      <Footer/>
-
-   </div>
+      {loading ? (
+        <Loading />
+      ) : (
+        <div>
+          <Header darkLogo={false} pageName={"Home"} />
+          <Main />
+      
+          <WhatWeDo />
+          <OurClients />
+          <Footer />
+        </div>
+      )}
     </>
   );
 }
