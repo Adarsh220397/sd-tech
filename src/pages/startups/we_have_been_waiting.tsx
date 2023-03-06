@@ -154,8 +154,8 @@ export default function WaitingComponent() {
                     name="servicesrequired[]"
                     value="Product Ideation"
                   />
-                  <span>Product Ideation</span></label
-                >
+                <span> Product Ideation</span> 
+                  </label>
                 <label
                   ><input
                     type="checkbox"
@@ -172,7 +172,7 @@ export default function WaitingComponent() {
                 <div className={styles.submitButtonWrap}>
                   <input
                     type="submit"
-                    id="sendmessage"
+                    id={styles.sendmessage}
                     name="send"
                     // class="btn-submit"
                     value="Send"
