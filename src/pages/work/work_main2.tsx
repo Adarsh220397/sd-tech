@@ -1,25 +1,27 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
-import ContentImagesOne from "./content";
-import Header from "../components/header";
-import Footer from "../components/footer";
-import OurClients from "../components/our_clients";
-import { Suspense, useEffect, useState } from "react";
 
-export default function Work() {
+interface IProps {
+  title :string;
+  description: string;
+  backgroundImage: string;
+  }
+
+export default function Work( {title, description, backgroundImage}:IProps) {
   return (
     <>
       {/* <Suspense fallback={<Loading />}> */}
 
       <div className={styles.homeHeaderServices}>
-        <div className={styles.bgImageForServices}>
+        <div className={styles.bgImageForWork}  style={{
+          backgroundImage:`url(${backgroundImage})`
+        }} > 
           <div className={styles.homeHeaderContent}>
             <div className={styles.container}>
               <div className={styles.serviceHeaderContentInner}>
-                <h1>Work</h1>
+                <h1>{title}</h1>
                 <p>
-                  We deliver beautiful products and great experiences that users
-                  love.
+                 {description}
                 </p>
               </div>
             </div>

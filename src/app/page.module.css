@@ -118,9 +118,16 @@ padding-left: 8%;
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+@media (min-width: 1200px) {
+
+  .whatWeDoContainer {
+      max-width: 1140px;
+  }
+  }
 .homeHeaderContentInnerBox {
   content: "";
   left: 0;
@@ -130,8 +137,17 @@ bottom: -3px;
   position: absolute;
   background-color: #ffd800;
 }
+
+.bgImageForWork{
+  /* background-image: url('https://studiodiseno.com/images/services/servicesBG.png'); */
+        width: 100%;
+    height: 100%;
+    object-fit:fill ;
+    background-size: auto;
+    min-height: 100vh;
+}
 .bgImageForServices{
-  background-image: url('https://studiodiseno.com/images/services/servicesBG.png');
+  /* background-image: url('https://studiodiseno.com/images/services/servicesBG.png'); */
         width: 100%;
     height: 100%;
     object-fit:fill ;
@@ -139,7 +155,7 @@ bottom: -3px;
     min-height: 100vh;
 }
 .bgImageForStartUp{
-  background-image: url('https://studiodiseno.com/images/startup/startupbg.png');
+  /* background-image: url('https://studiodiseno.com/images/startup/startupbg.png'); */
         width: 100%;
     height: 100%;
     object-fit:fill ;
@@ -150,9 +166,26 @@ bottom: -3px;
   background-image: url('https://studiodiseno.com/images/services/servicesBG.png');
         width: 100%;
     height: 100%;
-    object-fit:fill ;
-    background-size: auto;
     min-height: 100vh;
+    background-repeat: no-repeat;
+    /* object-position: right;
+   
+    float: right; */
+    display: -webkit-box;
+
+margin-left: auto;
+}
+
+.homeHeader:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.3);
 }
 .contactUsWrap {
   padding-top: 100px;
@@ -298,7 +331,7 @@ bottom: -3px;
 .whoWeAreBannerContent {
   display: flex;
   object-fit:contain ;
-  background-image: url(../../assets/images/whoWeAre/whoWeAreBanner.png);
+  /* background-image: url(../../assets/images/whoWeAre/whoWeAreBanner.png); */
   background-repeat: no-repeat;
   background-size: 75%;
   background-position: right;
@@ -500,9 +533,15 @@ align-content: center;
 .whoWeAreBanner {
   height: 90vh;
   padding-top: 120px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: auto;
+  padding-right: auto;
 }
+@media (min-width: 1200px) {
+
+  .container {
+      max-width: 1140px;
+  }
+  }
 .whoWeAreBannerTitleH1 {
   font-size: 75px;
   font-family: HelveticaNeueBold;
@@ -538,6 +577,26 @@ align-content: center;
   background-size: contain;
   background-position: right;
 }
+
+.versionAppDesignContent h1 {
+  color: #000;
+  font-size: 72px;
+  font-family: HelveticaNeueLight;
+  line-height: 71px;
+  font-weight: lighter;
+}
+
+.versionAppDesignContent p {
+  padding: 30px 0;
+  font-size: 20px;
+  color: #000;
+  font-family: HelveticaNeueLight;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+}
 .appVersionContainer {
   width: 100%;
   padding-right: 15px;
@@ -546,18 +605,43 @@ align-content: center;
   margin-left: auto;
 }
 
-.versionAppDesignContentH1 {
+/* .versionAppDesignContentH1 {
   color: #000;
   font-size: 72px;
   font-family: HelveticaNeueLight !important;
   line-height: 71px;
   margin: 0;
-padding-left: 100px;
+
   flex: 0 0 66.666667%;
   font-weight: lighter;
+} */
+@media (max-width: 450px){
+
+.versionAppContainer {
+ max-width: 100%;
+ width:100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    position: relative;
+    font-size: 40px;
+    line-height: 46px;
 }
 
-.versionAppDesignContentP {
+/* .versionAppDesignContentH1 {
+  font-size: 40px;
+  line-height: 46px;
+  max-width: 100%;
+} */
+}
+
+
+/* .versionAppDesignContentP {
   padding: 30px 0;
   font-size: 20px;
   font-weight: lighter;
@@ -574,26 +658,36 @@ padding-left: 100px;
   text-align: left;
   margin-bottom: 50px;
   margin:0
-}
+} */
 
-.exploreMoreBlack {
+/* .exploreMoreBlack {
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 20px;
-}
+} */
 .exploreMoreBlack a {
   border-color: #231f20 !important;
 }
 
+.exploreMoreBlack .exploreMoreanchore a::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #ffd200;
+  transform-origin: left;
+  transition: width 0.25s ease;
+  z-index: -1;
+}
+.exploreMoreBlack .exploreMoreanchore a:hover::after {
+  width: 100%;
+}
 .exploreMoreanchore a {
   position: relative;
   overflow: hidden;
-  text-decoration: none;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
- 
 }
 .exploreMoreanchore a {
   color: #231f20;
@@ -640,9 +734,6 @@ padding-left: 100px;
 }
 .servicesList {
   padding: 80px 0;
-}
-.servicesListImage  {
-  width: 100%;
 }
 .servicesListDesc {
   font-size: 30px;
@@ -697,7 +788,7 @@ padding-left: 100px;
 }
 .tabContentInner ul {
   display: inline-block;
-  width: 100%;
+  /* width: 100%; */
   padding-left: 30px;
   padding-top: 20px;
 }
@@ -779,16 +870,21 @@ padding-left: 100px;
   box-sizing: border-box;
   text-align: center;
 }
-.ourClientList img {
+/* .ourClientList img {
   width: 100%;
-}
+} */
 .ourClientListView {
   padding: 50px 0;
-  margin: 0 100px;
+  margin: 0;
+  margin-left:200px;
+
 }
 .ourClientListViewBox {
   display: flex;
   align-items: center;
+  flex-direction: row;
+    margin-right: -15px;
+    margin-left: -15px;
 
 }
 .ourClientListViewImg {
@@ -816,6 +912,17 @@ padding-left: 100px;
   margin-right: -15px;
   margin-left: -15px;
   flex-direction: 'row';
+}
+@media (max-width: 767px) {
+.versionAppDesign {
+    background-image: none;
+}
+}
+.versionAppRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 .colMd3 {
   flex: 0 0 25%;
@@ -961,11 +1068,11 @@ padding-left: 100px;
   position: relative;
 }
 
-.homeHeaderServicesImg {
+/* .homeHeaderServicesImg {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 .copyRightsBottom h5 {
   font-size: 14px;
   font-family: HelveticaNeueMedium;
@@ -1105,10 +1212,10 @@ font-weight: 500;
   /* display: -ms-flexbox; */
   display: flex;
   /* -ms-flex-wrap: wrap; */
-  /* flex-wrap: wrap; */
   margin-right: -15px;
   margin-left: -15px;
-  flex-direction: row;
+  /* flex-direction: row; */
+
 }
 
 .footerRow{
@@ -1174,6 +1281,9 @@ font-weight: 500;
   margin-right: auto;
   margin-left: auto;
 }
+
+
+
 @media (min-width: 1200px) {
 
 .container {
@@ -1185,7 +1295,112 @@ font-weight: 500;
   padding-left: 15px;
 
 }
+@media (max-width:450px){
+  .row {
+    /* display: -ms-flexbox; */
+    display: block;
+    /* -ms-flex-wrap: wrap; */
+    margin-right: -15px;
+    margin-left: -15px;
+   
+    flex-wrap: wrap;
+    
+  
+  }
 
+}
+
+@media (max-width: 767px){
+.whatWeDoTabContent {
+    display: block;
+    max-width: 100%;
+    padding: 0;
+}
+.tabContentInner ul li {
+  float: none;
+  width: 100%;
+}
+.menuList {
+  padding-top: 20px;
+}
+.socialMedia {
+  text-align: left;
+  margin: 15px 0;
+}
+.headerSectionRowColMd6 {
+  width: 100%;
+}
+.colMd8 {
+  max-width:100% !important;
+  flex: 0 0 100% !important;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.ourClientListView {
+  padding: 0;
+}
+.ourClientListViewImg {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  object-fit: none;
+}
+.rowColMd6{
+  width: 100%;
+}
+.servicesListDesc h3 {
+  line-height: 40px;
+  padding-bottom: 10px;
+}
+.currentOpenninglistWrap {
+  display: grid;
+}
+.whoWeAreBannerContent {
+  background-size: cover;
+  background-position: left;
+}
+.ourClientsWrap .sectionTitle:after {
+  left: 0;
+  display: none;
+}
+.ourClientsHeader {
+  width: 100%;
+}
+.whoWeAreContentPara {
+  width: 100%;
+}
+.whoWeAreStatatics {
+  display: block;
+  width: 100%;
+  padding-top: 40px;
+}
+.whoWeAreStataticsList {
+  width: auto;
+  border-right: 0;
+  text-align: center;
+}
+.servicesListDesc {
+  padding-top: 10px;
+}
+.servicesListDesc h3 {
+  line-height: 40px;
+  padding-bottom: 10px;
+}
+.servicesListImage  {
+    width: 100%;
+}
+.servicesList {
+  padding: 80px 0;
+}
+.versionAppDesignContent h1 {
+  font-size: 40px;
+  line-height: 46px;
+
+}
+
+}
 
 .contactUsWrapFormDetails .virtualAddress a {
     color: black;
@@ -1773,6 +1988,16 @@ font-weight: 500;
   background-repeat: no-repeat;
   top: 13px;
 }
+@media (min-width: 768px){
+.rowColMd6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    
+    padding-right: 15px;
+    padding-left: 15px;
+}
+}
 @media (max-width: 991px) and (min-width: 768px) {
   .whatWeDoTabContent {
     padding: 0 60px;
@@ -1948,7 +2173,13 @@ input#sendmessage:hover {
   visibility: hidden;
   display: none;
 }
-
+@media (min-width: 768px){
+.col-md-6 {
+    
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+}
 .radiobuttonGroup label {
   color: #231f20;
   font-size: 14px;

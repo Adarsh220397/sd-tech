@@ -10,8 +10,9 @@ import Careers from "./careers2";
 import CurrentOpennings from "./current_opennings";
 import { useState, useEffect } from "react";
 import Loading from "@/app/loading";
+import { createClient } from "contentful";
 
-export default function CareersIndex() {
+export default function CareersIndex({content,displayContent,addressContent}:any) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -28,13 +29,51 @@ export default function CareersIndex() {
         <>
           <div>
             <Header darkLogo={true} pageName={"Career"} />
-            <Careers />
+            {
+              displayContent.map((data:any,index:number)=> (
+                <Careers title={data.fields.title} description={data.fields.homeScreenImageContent} backgroundImage={data.fields.backgroundImage.fields.file.url} />
+              ))
+            }
+       
             <CurrentOpennings />
-            <OurClients />
-            <Footer />
+            {content.map((data:any, index: number)=>(
+      
+      <OurClients  content={data?.fields?.appContent}/>
+  ))}
+          {addressContent.map((data:any,index:number)=>(
+                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.mail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
+                        ))}
           </div>
         </>
       )}
     </>
   );
 }
+export async function getStaticProps(){
+
+  const client = createClient({
+    space:  'cy16bo6v0525',
+    accessToken: 'Yh0Z1HcEaVy1g0pCx-q1OyGSQJpOe3JuMvrxFkPLX0w',
+  })
+  
+  const res = await client.getEntries({
+  content_type :'appVersionComponent'
+  })
+
+  const response = await client.getEntries({
+    content_type: "homeScreenDisplay", 
+    "fields.title": "Come work with us!",
+  });
+  const contactDetailsResponse = await client.getEntries({
+    content_type :'contactAddressContent'
+    })
+  
+  
+  return {
+    props:{
+      content:res.items,
+displayContent:response.items,
+addressContent: contactDetailsResponse.items,
+    }
+  }
+  }

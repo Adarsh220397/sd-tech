@@ -4,7 +4,10 @@ const nextConfig = {
     appDir: true,
     
   },
-  reactStrictMode:false
+  reactStrictMode:false,
+  images: {
+    domains:['images.ctfassets.net']
+  }
 }
 
-module.exports = nextConfig
+module.exports =  nextConfig

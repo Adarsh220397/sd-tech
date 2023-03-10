@@ -1,30 +1,32 @@
 import Image from "next/image";
 import { Suspense } from "react";
 import styles from "../../app/page.module.css";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import OurClients from "../components/our_clients";
-import DigitalExpStrategy from "./digital_exp_strategy";
-import UserExperienceAndDesign from "./user_exp_design";
-import WebMobileApplicationDev from "./web_mob_app_dev";
 
-export default function Services() {
+
+
+interface IProps {
+  title :string;
+  description: string;
+  backgroundImage: string;
+  }
+export default function Services({title, description,backgroundImage}:IProps ) {
   return (
     <>
       {/* <Suspense fallback={<Loading />}> */}
     {/* <Header darkLogo={false} pageName={'Services'}/> */}
       <div >
-        <div className={styles.bgImageForServices}>
+        <div className={styles.bgImageForServices} style={{
+          backgroundImage:`url(${backgroundImage})`
+        }}>
           <div className={styles.homeHeaderContent}>
             <div className={styles.container}>
               <div className={styles.serviceHeaderContentInner}>
                 <h1>
-                 <div>{'Services'}</div> 
+                 <div>{title}</div> 
                 
                 </h1>
                 <p>
-                  We deliver beautiful products and great experiences that users
-                  love.
+           {description}
                 </p>
               </div>
             </div>

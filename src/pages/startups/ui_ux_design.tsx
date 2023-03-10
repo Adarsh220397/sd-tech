@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import uxdesign from "../../../assets/images/startup/uxdesign.png";
-export default function UIUXDesign() {
+export default function UIUXDesign({uiuxdesignContent}:any) {
   return (
     <>
       <div
@@ -19,38 +19,43 @@ export default function UIUXDesign() {
             <div className={styles.headerSectionRowColMd6}>
               <div className={styles.servicesListDesc}>
               <div className={styles.tabContentInner}>
-              <div className={styles.tabContentInnerBlock}>
-                <h3>UX/UI design</h3>
-                <p>
-                Creating the best user experience and customer satisfaction
-                      through the impeccable UX and UI of the product with a team
-                      of talented designers and developers.
-                </p>
+                {uiuxdesignContent.map((data:any,index:number)=>(
+     <div className={styles.tabContentInnerBlock}>
+     <h3>{data.fields.heading}</h3>
+     <p>
+     {data.fields.description}
+     </p>
 
-                <ul>
-                      <li>Wireframing to create a prototype of the product</li>
-                      <li>
-                        Information Architecture to create an insightful structure
-                      </li>
-                      <li>Interactive design for seamless user engagement</li>
-                      <li>Focus on ease of use and user-friendliness</li>
-                    </ul>
-              </div>
+     <ul>
+           <li>Wireframing to create a prototype of the product</li>
+           <li>
+             Information Architecture to create an insightful structure
+           </li>
+           <li>Interactive design for seamless user engagement</li>
+           <li>Focus on ease of use and user-friendliness</li>
+         </ul>
+   </div>
+                ))}
+         
               </div>
               </div>
             </div>
             <div className={styles.headerSectionRowColMd6}>
-              <div className={styles.servicesListImage}>
-                <Image
-                  src={uxdesign}
-                  alt="uxdesign"
-                  style={{
-                    verticalAlign: "middle",
-                  }}
-               
-                  priority
-                />
-              </div>
+              {uiuxdesignContent.map((data:any)=>(
+      <div className={styles.servicesListImage}>
+      <Image
+        src={'https:'+data.fields.image.fields.file.url}
+        alt="uxdesign"
+        style={{
+          verticalAlign: "middle",
+        }}
+        width={512}
+        height={452}
+        priority
+      />
+    </div>
+              ))}
+        
             </div>
           </div>
         </div>

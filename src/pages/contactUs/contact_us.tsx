@@ -6,8 +6,9 @@ import OurClients from "../components/our_clients";
 import linkedIn from "../../../assets/images/linkedin.svg";
 import { useState, useEffect } from "react";
 import Loading from "@/app/loading";
+import { createClient } from "contentful";
 
-export default function ContactUs() {
+export default function ContactUs({content, addressContent}:any) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -16,7 +17,9 @@ export default function ContactUs() {
     setLoading(false);
     console.log("------------");
   }, []);
+  console.log(addressContent)
   return (
+    
     <>
       {loading ? (
         <Loading />
@@ -30,9 +33,18 @@ export default function ContactUs() {
                 <div className={styles.contactUsRow}>
                   <div className={styles.colMd8}>
                     <div className={styles.contactUsWrapForm}>
-                      <h3>{"We 've been waiting for you..."}</h3>
-                      <h5>{"Ready to begin your journey?"}</h5>
-                      <p>{" Get Started With Studio Diseno Today!"}</p>
+                      {content.map((data:any,index:number)=>(
+                           <h3>{data.fields.title}</h3>
+                      ))}
+                         {content.map((data:any,index:number)=>(
+                     <h5>{data.fields.subTitle1}</h5>
+                      ))}
+                           {content.map((data:any,index:number)=>(
+                       <p>{data.fields.subTitle2}</p>
+                      ))}
+                   
+                     
+                    
                       <form name="contactForm">
                         <div className={styles.checkboxGroup}>
                           <div className={styles.groupTitle}>
@@ -48,12 +60,18 @@ export default function ContactUs() {
                               flexDirection: "row",
                             }}
                           >
-                            <div className={styles.chip}>
-                              <label>
-                                <span> Branding</span>
-                              </label>
-                            </div>
-                            <div className={styles.chip}>
+                                      {content.map((data:any,index:number)=>(
+                      data.fields.serviceList.map((serviceItem:any,index:number)=>(
+                        <div className={styles.chip}>
+                        <label>
+                          <span>{serviceItem}</span>
+                        </label>
+                      </div>
+                      ))
+                      ))}
+
+                           
+                            {/* <div className={styles.chip}>
                               <label>
                                 <span> Web design</span>
                               </label>
@@ -72,7 +90,7 @@ export default function ContactUs() {
                               <label>
                                 <span>Animation</span>
                               </label>
-                            </div>
+                            </div> */}
                           </div>
                         </div>
 
@@ -84,14 +102,27 @@ export default function ContactUs() {
                               className={styles.spanInfo}
                             ></span>
                           </div>
-                          <input
+<div    style={{
+                              display: "flex",
+                              flexDirection: "row",
+                            }}>
+                          {content.map((data:any,index:number)=>(
+                      data.fields.budgetList.map((budgetItem:any,index:number)=>(
+                        <div >
+                     
+                        <input
                             type="radio"
                             name="budget"
                             value="$15K - $30K"
                             id="$15K - $30K"
                           />
-                          <label className={styles.chip}>$15K - $30K</label>
-                          <input
+                          <label className={styles.chip}>{budgetItem}</label>
+                        
+                      </div>
+                      ))
+                      ))}
+                       </div>
+                          {/* <input
                             type="radio"
                             name="budget"
                             value="$30K - $50K"
@@ -111,7 +142,7 @@ export default function ContactUs() {
                             value="$80K and above"
                             id="$80K and above"
                           />
-                          <label className={styles.chip}>$80K and above</label>
+                          <label className={styles.chip}>$80K and above</label> */}
                         </div>
                         <div className={styles.rowInput}>
                           <div className={styles.colInput}>
@@ -182,36 +213,50 @@ export default function ContactUs() {
                   </div>
                   <div className={styles.formColMd4}>
                     <div className={styles.contactUsWrapFormDetails}>
+                  
                       <h3>Contact us</h3>
-                      <div className={styles.virtualAddress}>
-                        <a href="mailto:hello@studiodiseno.com">
-                          {"E-mail: hello@studiodiseno.com"}
-                        </a>
-                      </div>
+                      {addressContent.map((data:any,index:number)=>(
+                            <div className={styles.virtualAddress}>
+                            <a href="mailto:hello@studiodiseno.com">
+                              E-mail: {data.fields.eMail}
+                            </a>
+                          </div>
+                        ))}
+                  
                       <div
                         style={{
                           height: "5px",
                         }}
                       ></div>
-                      <div className={styles.virtualAddress}>
-                        <a href="tel:+91 44 42632026">
-                          {"Contact: +91 44 42632026"}{" "}
-                        </a>
-                      </div>
+                           {addressContent.map((data:any,index:number)=>(
+                           <div className={styles.virtualAddress}>
+                           <a href="tel:+91 44 42632026">
+                             Contact:{data.fields.phone}{" "}
+                           </a>
+                         </div>
+                        ))}
+                  
+                   
                       <div className={styles.physicalAddress}>
-                        <h4>
-                          No.108, Theyagaraya Road,
-                          <br></br>T Nagar, Chennai - 17, India.
-                        </h4>
+                      {addressContent.map((data:any,index:number)=>(
+                       <h4>
+                   {data.fields.indianAddress}
+                       <br></br> {data.fields.indianAddress2}
+                     </h4>
+                        ))}
+                       
                         <a href="https://goo.gl/maps/cGemWsnPPi1Ja5G7A">
                           View Map{" "}
                         </a>
                       </div>
                       <div className={styles.physicalAddress}>
-                        <h4>
-                          186 Princeton Hightstown Rd, Bldg 3, Suite 10, West
-                          Windsor, NJ 08550
+                      {addressContent.map((data:any,index:number)=>(
+                     <h4>
+                          {data.fields.usAddress}<br></br>
+                          {data.fields.usAddress2}
                         </h4>
+                        ))}
+                      
                         <a href="https://goo.gl/maps/M1qFmNvrbmgx6tMTA">
                           View Map{" "}
                         </a>
@@ -229,11 +274,36 @@ export default function ContactUs() {
               </div>
             </div>
 
-            <OurClients />
-            <Footer />
+            {/* <OurClients /> */}
+            {addressContent.map((data:any,index:number)=>(
+                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.mail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
+                        ))}
+
           </div>
         </>
       )}
     </>
   );
 }
+export async function getStaticProps(){
+
+  const client = createClient({
+    space:  'cy16bo6v0525',
+    accessToken: 'Yh0Z1HcEaVy1g0pCx-q1OyGSQJpOe3JuMvrxFkPLX0w',
+  })
+  
+  const res = await client.getEntries({
+  content_type :'contactUs'
+  })
+
+  const contactDetailsResponse = await client.getEntries({
+    content_type :'contactAddressContent'
+    })
+  
+  return {
+    props:{
+      content:res.items,
+addressContent: contactDetailsResponse.items,
+    }
+  }
+  }

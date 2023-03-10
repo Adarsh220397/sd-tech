@@ -3,25 +3,30 @@ import alesia from "../../../assets/images/whoWeAre/alesia-kazantceva.png";
 import priscilla from "../../../assets/images/whoWeAre/priscilla.png";
 import brooke from "../../../assets/images/whoWeAre/brooke-cagle.png";
 import Image from "next/image";
-export default function WhoWeAreContent() {
+import { createClient } from "contentful";
+
+
+export default function WhoWeAreContent({content1 , content2, image1, image2, image3}:any) {
   return (
     <>
+          <style jsx>
+        {`
+     .whoWeAreContentA {
+      padding: 60px 0;
+    }
+        `}
+      </style>
       <div
         style={{
           backgroundColor: "white",
           minHeight: "100vh",
         }}
       >
-        <div className={styles.whoWeAreContent}>
-          <div className={styles.whoWeAreContentContainer}>
+        <div className="whoWeAreContentA"> 
+                    <div className={styles.whoWeAreContentContainer}>
             <div className={styles.whoWeAreContentPara}>
               <p className={styles.whoWeAreContentP}>
-                We are a bunch of passionate people at the intersection of
-                design & technology, reinventing possibilities and pushing the
-                envelope further with outstanding design solutions. We
-                established ourselves in Chennai in 2014 with the aim of
-                impacting the world in a positive way with our strong aesthetic
-                sense.
+          {content1}
               </p>
               <div className={styles.whoWeAreStatatics}>
                 <div className={styles.whoWeAreStataticsList}>
@@ -39,20 +44,43 @@ export default function WhoWeAreContent() {
               </div>
               <div className={styles.whoWeAreGallery}>
                 <div className={styles.whoWeAreGalleryContent}>
+
+                  
                   <h3>
-                    A vibrant work culture that nurtures creativity and fosters
-                    innovation is our secret.
+               {content2}
                   </h3>
                 </div>
                 <div className={styles.whoWeAreGalleryImage}>
                   <div  >
-                    <Image src={alesia} alt="alesia" priority className={styles.whoWeAreGalleryImageImg}/>
+                    <Image  src={'https:' + image1} alt="alesia" priority className={styles.whoWeAreGalleryImageImg}
+                     width={
+                      '380'
+                    }
+                    height={
+                      '420'
+                    }
+                     />
                   </div>
                   <div >
-                    <Image src={priscilla} alt="priscilla" priority className={styles.whoWeAreGalleryImageImg} />
+                    <Image
+                     width={
+                      '380'
+                    }
+                    height={
+                      '420'
+                    }
+                    src={'https:' + image2} alt="priscilla" priority className={styles.whoWeAreGalleryImageImg} />
                   </div>
                   <div>
-                    <Image src={brooke} alt="brooke" priority className={styles.whoWeAreGalleryImageImg} />
+                    <Image src={'https:' + image3} alt="brooke" priority className={styles.whoWeAreGalleryImageImg} 
+                     width={
+                      '380'
+                    }
+                    height={
+                      '420'
+                    }
+                    
+                    />
                     {/* <img class="lazy" data-src="./images/whoWeAre/alesia-kazantceva.png" alt="whoWeAreGallery">
                         <img class="lazy" data-src="./images/whoWeAre/priscilla.png" alt="whoWeAreGallery">
                         <img class="lazy" data-src="./images/whoWeAre/brooke-cagle.png" alt="whoWeAreGallery"> */}
@@ -66,3 +94,4 @@ export default function WhoWeAreContent() {
     </>
   );
 }
+

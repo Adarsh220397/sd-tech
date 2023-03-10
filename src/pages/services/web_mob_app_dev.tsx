@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import webApp from "../../../assets/images/services/webApp.png";
-export default function WebMobileApplicationDev() {
+export default function WebMobileApplicationDev({heading,description,contentList, image}:any) {
   return (
     <>
       <div
@@ -20,13 +20,9 @@ export default function WebMobileApplicationDev() {
               <div className={styles.servicesListDesc}>
               <div className={styles.tabContentInner}>
               <div className={styles.tabContentInnerBlock}>
-                <h3>Web & Mobile Application Development</h3>
+                <h3>{heading}</h3>
                 <p>
-                  Our full stack development services will help you create
-                  modern applications on time and under budget. We can assist
-                  you with all of your application development needs from
-                  mobile, web development, backend development to API
-                  development, integration and deployment.
+           {description}
                 </p>
 
                 <ul>
@@ -41,13 +37,13 @@ export default function WebMobileApplicationDev() {
             <div className={styles.headerSectionRowColMd6}>
               <div className={styles.servicesListImage}>
                 <Image
-                  src={webApp}
+                  src={'https:'+image}
                   alt="webApp"
                   style={{
                     verticalAlign: "middle",
                   }}
-                  width={540}
-                  height={540}
+                  width={512}
+                  height={452}
                   priority
                 />
               </div>

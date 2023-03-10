@@ -3,7 +3,7 @@ import styles from "../../app/page.module.css";
 import userExp from "../../../assets/images/services/userExp.png";
 
 
-export default function UserExperienceAndDesign() {
+export default function UserExperienceAndDesign({heading,description,contentList, image}:any) {
   return (
     <>
       <div
@@ -21,13 +21,13 @@ export default function UserExperienceAndDesign() {
             <div className={styles.headerSectionRowColMd6}>
               <div className={styles.servicesListImage}>
                 <Image
-                  src={userExp}
+                  src={'https:'+image}
                   alt="UserExp"
                   style={{
                     verticalAlign: "middle",
                   }}
-                  width={540}
-                  height={540}
+                  width={512}
+                  height={452}
                   priority
                 />
               </div>
@@ -35,13 +35,9 @@ export default function UserExperienceAndDesign() {
             <div className={styles.headerSectionRowColMd6}>
               <div className={styles.servicesListDesc}>
                 <div className={styles.tabContentInner}>
-                  <h3>User Experience and Design</h3>
+                  <h3>{heading}</h3>
                   <p>
-                    We combine human-centred design with leading-edge technology
-                    to deliver compelling experiences that move markets and
-                    transform businesses. We can assist you with UX research,
-                    analysis, IA, wire framing, UI design, interaction,
-                    prototyping and UX testing.
+        {description}
                   </p>
                   <ul>
                     <li>User Analysis</li>

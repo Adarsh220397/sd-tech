@@ -1,14 +1,15 @@
 import { Router } from "next/router";
 import { useState, useEffect, Suspense } from "react";
 import styles from "../../app/page.module.css";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import OurClients from "../components/our_clients";
-import WhoWeAreContent from "./content";
-import VersionApp from "./version_app";
-import Image from "next/image";
-import loader from "../../../assets/images/loader.gif";
-export default function WhoWeAre() {
+
+
+interface IProps {
+  title :string;
+  backgroundImage: string;
+  }
+
+export default function WhoWeAre( {title,backgroundImage}:IProps) {
+
   return (
     <>
       
@@ -20,10 +21,12 @@ export default function WhoWeAre() {
         <div>
           <div className={styles.whoWeAreBanner}>
             <div className={styles.whoWeAreContainer}>
-              <div className={styles.whoWeAreBannerContent}>
+              <div className={styles.whoWeAreBannerContent} style={{
+                backgroundImage:`url(${backgroundImage})`
+              }}>
                 <div className={styles.whoWeAreBannerTitle}>
                   <h1 className={styles.whoWeAreBannerTitleH1}>
-                    {"Who We Are"}
+                    {title}
                   </h1>
                 </div>
               </div>

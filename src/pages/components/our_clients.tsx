@@ -18,16 +18,18 @@ import tagStone from "../../../assets/images/clients/Clientlogo/Tagstone.png";
 import trueRCM from "../../../assets/images/clients/Clientlogo/trueRCM.png";
 import weinvest from "../../../assets/images/clients/Clientlogo/weinvest.png";
 import tsLogo from "../../../assets/images/clients/Clientlogo/tie-silicon-logo.png";
+interface IProps {
+  content:string;
+}
 
-
-export default function OurClients() {
+export default function OurClients({content }:IProps) {
   return (
     <>
-      <div
+      <div 
         
        className={styles.ourClientsWrap}
       > 
-        <div
+        <div 
         // className={styles.ourClientContainer}
          
         >
@@ -36,10 +38,14 @@ export default function OurClients() {
               <h1>Our Clients</h1>
             </div>
             <div className={styles.ourClientsDescription}>
-              <p>
-                We’ve been grateful to work with a wide range of verticals. Our
+            {/* {content.map((text)=> {
+              return <p> {text}</p>
+            })} */}
+           
+              <p>  {content}
+                {/* We’ve been grateful to work with a wide range of verticals. Our
                 creativity enables us to collaborate on many different types of
-                projects from Branding Design to enterprise software.
+                projects from Branding Design to enterprise software. */}
               </p>
             </div>
           </div>

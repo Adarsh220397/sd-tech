@@ -3,7 +3,17 @@ import styles from "../../app/page.module.css";
 import logoText from "../../../assets/images/logoText.svg";
 import linkedIn from "../../../assets/images/linkedin.svg";
 
-export default function Footer() {
+interface  IProps{
+mailId:string,
+contact:string,
+inAddress1:string,
+inAddress2:string,
+usAddress1:string,
+usAddress2:string,
+
+}
+
+export default function Footer({mailId, contact,inAddress1,inAddress2,usAddress1,usAddress2}:IProps) {
   return (
     <>
       <div className={styles.footer}
@@ -50,26 +60,27 @@ export default function Footer() {
               </div>
               <div className={styles.colMd4} >
                 <div className={styles.digitalAddress}>
+                
                   <h5>
                     E-mail:{" "}
                     <a  style={{
                     textDecoration:'none'
                   }}href={"mailto:hello@studiodiseno.com"}>
-                      hello@studiodiseno.com
+                     {mailId}
                     </a>
                   </h5>
                   
                   <h5>
                     Contact: <a  style={{
                     textDecoration:'none'
-                  }} href="tel:+91 44 42632026"> +91 44 42632026</a>
+                  }} href="tel:+91 44 42632026">{contact}</a>
                   </h5>
                 </div>
                 <div className={styles.physicalAddress}>
                   <h6>India</h6>
-                  <h5>No.108, Theyagaraya Road, T Nagar,
+                  <h5>{inAddress1}
                     <br></br>
-                 Chennai - 17, India.</h5>
+              {inAddress2}</h5>
                   <a  style={{
                     textDecoration:'none'
                   }} href={"https://goo.gl/maps/cGemWsnPPi1Ja5G7A"}>
@@ -78,9 +89,9 @@ export default function Footer() {
                 </div>
                 <div className={styles.physicalAddress}>
                   <h6>USA</h6>
-                  <h5>186 Princeton Hightstown Rd, Bldg 3,
+                  <h5>{usAddress1}
                     <br></br>
-                  Suite 10, West Windsor, NJ 08550.</h5>
+                    {usAddress2}</h5>
                   <a style={{
                     textDecoration:'none'
                   }} href={"https://goo.gl/maps/M1qFmNvrbmgx6tMTA"}>

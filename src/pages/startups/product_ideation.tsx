@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../../app/page.module.css";
 import productionideation from "../../../assets/images/startup/productionideation.png";
-export default function ProductIdeation() {
+export default function ProductIdeation({productIdeationContent}:any) {
   return (
     <>
       <div
@@ -17,43 +17,48 @@ export default function ProductIdeation() {
         >
           <div className={styles.row}>
             <div className={styles.headerSectionRowColMd6}>
-              <div>
-                <Image
-                  src={productionideation}
-                  alt="productionideation"
-                  style={{
-                    verticalAlign: "middle",
-                  }}
-                  priority
-                />
-              </div>
+              {productIdeationContent.map((data:any,index:number)=>(
+    <div>
+    <Image
+      src={'https:'+data.fields.image.fields.file.url}
+      alt="productionideation"
+      style={{
+        verticalAlign: "middle",
+      }}
+      width={512}
+      height={452}
+      priority
+    />
+  </div>
+              ))}
+          
             </div>
             <div className={styles.headerSectionRowColMd6}>
               <div className={styles.servicesListDesc}>
                 <div className={styles.tabContentInner}>
-                  <div className={styles.tabContentInnerBlock}>
-                    <h3>Product Ideation</h3>
-                    <p>
-                      Just implementing things is definitely not how we build a
-                      product. We approach products with a fresh perspective,
-                      identify possibilities, and leverage team creativity to
-                      build better and innovative solutions.
-                    </p>
-                    <ul>
-                      <li>
-                        Client engagements to determine goals and challenges
-                      </li>
-                      <li>
-                        Periodical evaluation of needs and requirements using
-                        user and stakeholder perspectives
-                      </li>
-                      <li>
-                        Formalized product ideation based on goals and
-                        objectives
-                      </li>
-                      <li>Determination of business logic</li>
-                    </ul>
-                  </div>
+                  {productIdeationContent.map((data:any,index:number)=>(
+    <div className={styles.tabContentInnerBlock}>
+    <h3>{data.fields.heading}</h3>
+    <p>
+    {data.fields.description}
+    </p>
+    <ul>
+      <li>
+        Client engagements to determine goals and challenges
+      </li>
+      <li>
+        Periodical evaluation of needs and requirements using
+        user and stakeholder perspectives
+      </li>
+      <li>
+        Formalized product ideation based on goals and
+        objectives
+      </li>
+      <li>Determination of business logic</li>
+    </ul>
+  </div>
+                  ))}
+              
                 </div>
               </div>
             </div>
