@@ -8,7 +8,7 @@ const nextConfig = {
   images: {
     domains:['images.ctfassets.net']
   },
-  pageExtensions: ['.tsx', '.jsx']
+ 
 }
 
 module.exports =  nextConfig
