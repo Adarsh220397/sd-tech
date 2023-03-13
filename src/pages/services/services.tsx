@@ -35,30 +35,30 @@ export default function ServiceMainIndex({ content, displayContent ,addressConte
         
             {displayContent.map((data: any, index: number) => (
          
-              <Services title={data?.fields?.title}description={data?.fields?.homeScreenImageContent } backgroundImage={data?.fields?.backgroundImage.fields.file.url}/>
+              <Services key={data.key} title={data?.fields?.title}description={data?.fields?.homeScreenImageContent } backgroundImage={data?.fields?.backgroundImage.fields.file.url}/>
             ))}
            
            {userExpPageContent.map((data: any, index: number) => (
          
-         <DigitalExpStrategy heading={data.fields.heading}description ={data.fields.description} contentList={data.fields.contentList} image={data.fields.image.fields.file.url}  />
+         <DigitalExpStrategy key={data.key} heading={data.fields.heading}description ={data.fields.description} contentList={data.fields.contentList} image={data.fields.image.fields.file.url}  />
        ))}
       
       {webAppDetailsContent.map((data: any, index: number) => (
          
-         <WebMobileApplicationDev heading={data.fields.heading}description ={data.fields.description} contentList={data.fields.contentList} image={data.fields.image.fields.file.url}/>
+         <WebMobileApplicationDev key={data.key} heading={data.fields.heading}description ={data.fields.description} contentList={data.fields.contentList} image={data.fields.image.fields.file.url}/>
        ))}
          {digitalExpContent.map((data: any, index: number) => (
-      <UserExperienceAndDesign heading={data.fields.heading}description ={data.fields.description} contentList={data.fields.contentList} image={data.fields.image.fields.file.url}/>
+      <UserExperienceAndDesign key={data.key}heading={data.fields.heading}description ={data.fields.description} contentList={data.fields.contentList} image={data.fields.image.fields.file.url}/>
        ))}
          
             
             {content.map((data: any, index: number) => (
              
-              <OurClients content={data?.fields?.appContent} />
+              <OurClients key={data.key} content={data?.fields?.appContent} />
             ))}
 
 {addressContent.map((data:any,index:number)=>(
-                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
+                             <Footer key={data.key} contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
                         ))}
           </div>
         </>

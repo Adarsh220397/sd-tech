@@ -30,23 +30,23 @@ export default function WhoWeAreMainIndex({content,displayContent,addressContent
         <div>
           <Header darkLogo={true} pageName={"WhoWeAre"} />
           {displayContent.map((data:any,index:number)=>(
- <WhoWeAre  title={data?.fields?.title}backgroundImage={data?.fields?.backgroundImage.fields.file.url}/>
+ <WhoWeAre key = { data.key} title={data?.fields?.title}backgroundImage={data?.fields?.backgroundImage.fields.file.url}/>
           ))}
          {
           whoWeAreContent.map((data:any,index:number)=> (
-            <WhoWeAreContent content1={data.fields.content} content2 = {data.fields.content2} image1={data.fields.image1.fields.file.url} image2={data.fields.image2.fields.file.url} image3={data.fields.image3.fields.file.url} />
+            <WhoWeAreContent key = { data.key} content1={data.fields.content} content2 = {data.fields.content2} image1={data.fields.image1.fields.file.url} image2={data.fields.image2.fields.file.url} image3={data.fields.image3.fields.file.url} />
           ))
          }
                   {versionAppContent.map((data:any, index: number)=>(
-    <VersionApp heading={data?.fields?.heading} versionAppContent= {data.fields.content} />
+    <VersionApp  key = { data.key}heading={data?.fields?.heading} versionAppContent= {data.fields.content} />
   ))}
        
          
           {content.map((data:any, index: number)=>(
-      <OurClients  content={data?.fields?.appContent}/>
+      <OurClients key = { data.key} content={data?.fields?.appContent}/>
   ))}
  {addressContent.map((data:any,index:number)=>(
-                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
+                             <Footer key = { data.key} contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
                         ))}
         </div>
       )}

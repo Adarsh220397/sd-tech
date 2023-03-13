@@ -31,17 +31,17 @@ export default function CareersIndex({content,displayContent,addressContent}:any
             <Header darkLogo={true} pageName={"Career"} />
             {
               displayContent.map((data:any,index:number)=> (
-                <Careers title={data.fields.title} description={data.fields.homeScreenImageContent} backgroundImage={data.fields.backgroundImage.fields.file.url} />
+                <Careers key={data.key} title={data.fields.title} description={data.fields.homeScreenImageContent} backgroundImage={data.fields.backgroundImage.fields.file.url} />
               ))
             }
        
             <CurrentOpennings />
             {content.map((data:any, index: number)=>(
       
-      <OurClients  content={data?.fields?.appContent}/>
+      <OurClients  key={data.key} content={data?.fields?.appContent}/>
   ))}
           {addressContent.map((data:any,index:number)=>(
-                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
+                             <Footer key={data.key} contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
                         ))}
           </div>
         </>

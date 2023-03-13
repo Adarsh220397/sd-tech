@@ -44,7 +44,7 @@ export default function ContentImagesOne({
             }}
           >
             {eCommerceContent.map((data: any, index: number) => (
-              <div className={styles.headerSectionRowColMd6}>
+              <div key = { data.key} className={styles.headerSectionRowColMd6}>
                 <Image
                   src={"https:" + data.fields.image.fields.file.url}
                   alt="redefinedShopping"
@@ -62,7 +62,7 @@ export default function ContentImagesOne({
               </div>
             ))}
             {digiStrategyContent.map((data: any, index: number) => (
-              <div className={styles.headerSectionRowColMd6}>
+              <div key = { data.key} className={styles.headerSectionRowColMd6}>
                 <Image
                   src={"https:" + data.fields.image.fields.file.url}
                   alt="digialMusic"
@@ -87,7 +87,7 @@ export default function ContentImagesOne({
             }}
           >
             {finseverContent.map((data: any, index: number) => (
-              <div className={styles.headerSectionRowColMd6}>
+              <div key = { data.key} className={styles.headerSectionRowColMd6}>
                 <Image
                   src={"https:" + data.fields.image.fields.file.url}
                   alt="optimizingDigital"
@@ -105,7 +105,7 @@ export default function ContentImagesOne({
               </div>
             ))}
             {hrSolutionContent.map((data: any, index: number) => (
-              <div className={styles.headerSectionRowColMd6}>
+              <div   key={index} className={styles.headerSectionRowColMd6}>
                 <Image
                   src={"https:" + data.fields.image.fields.file.url}
                   alt="hrsolution"
@@ -131,7 +131,7 @@ export default function ContentImagesOne({
             }}
           >
             {hrMarketPlaceContent.map((data: any, index: number) => (
-              <div className={styles.headerSectionRowColMd6}>
+              <div   key={index} className={styles.headerSectionRowColMd6}>
                 <Image
                   src={"https:" + data.fields.image.fields.file.url}
                   alt="solvecubeHRBanner"
@@ -150,7 +150,7 @@ export default function ContentImagesOne({
             ))}
 
             {financeContent.map((data: any, index: number) => (
-              <div className={styles.headerSectionRowColMd6}>
+              <div   key={index} className={styles.headerSectionRowColMd6}>
                 <Image
                   src={"https:" + data.fields.image.fields.file.url}
                   alt="weInvestSmallBanner"

@@ -18,9 +18,9 @@ export default function MVP({mvpContent}:any) {
           <div className={styles.row}>
             <div className={styles.headerSectionRowColMd6}>
               {mvpContent.map((data:any)=>(
-        <div>
+        <div key={data.key}>
         <Image
-          src={'https:'+data.fields.image.fields.file.url}
+          src={'https:'+ data.fields.image.fields.file.url}
           alt="mvp"
           style={{
             verticalAlign: "middle",
@@ -37,7 +37,7 @@ export default function MVP({mvpContent}:any) {
               <div className={styles.servicesListDesc}>
                 <div className={styles.tabContentInner}>
                   {mvpContent.map((data:any,index:number)=>(
-   <div className={styles.tabContentInnerBlock}>
+   <div key={data.key} className={styles.tabContentInnerBlock}>
    <h3>{data.fields.heading}</h3>
    <p>
     {data.fields.description}

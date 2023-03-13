@@ -40,36 +40,38 @@ export default function MvpIndex({
         <div>
           <Header darkLogo={true} pageName={"Startups"} />
           {displayContent.map((data: any, index: number) => (
-            <StartUp
+            <StartUp  key={data.key}
               title={data.fields.title}
               description={data.fields.homeScreenImageContent}
               backgroundImage={data.fields.backgroundImage.fields.file.url}
             />
           ))}
-{productIdeationContent.map(()=>(
 
-<ProductIdeation productIdeationContent={productIdeationContent} />
-))}
-{uiuxdesignContent.map(()=>(
+
+<ProductIdeation  productIdeationContent={productIdeationContent} />
+
+
   <UIUXDesign uiuxdesignContent={uiuxdesignContent} />
-))}
-{mvpContent.map(()=>(
+
+
   <MVP mvpContent={mvpContent}/>
-))}
+
           
          
           <WaitingComponent />
           {versionAppContent.map((data: any, index: number) => (
             <VersionApp
+            key={index}
               heading={data?.fields?.heading}
               versionAppContent={data.fields.content}
             />
           ))}
           {content.map((data: any, index: number) => (
-            <OurClients content={data?.fields?.appContent} />
+            <OurClients   key={index} content={data?.fields?.appContent} />
           ))}
           {addressContent.map((data: any, index: number) => (
             <Footer
+            key={index}
               contact={data.fields.phone}
               inAddress1={data.fields.indianAddress}
               inAddress2={data.fields.indianAddress2}

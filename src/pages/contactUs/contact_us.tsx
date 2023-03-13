@@ -34,13 +34,13 @@ export default function ContactUs({content, addressContent}:any) {
                   <div className={styles.colMd8}>
                     <div className={styles.contactUsWrapForm}>
                       {content.map((data:any,index:number)=>(
-                           <h3>{data.fields.title}</h3>
+                           <h3 key={data.key}> {data.fields.title}</h3>
                       ))}
                          {content.map((data:any,index:number)=>(
-                     <h5>{data.fields.subTitle1}</h5>
+                     <h5 key={data.key}> {data.fields.subTitle1}</h5>
                       ))}
                            {content.map((data:any,index:number)=>(
-                       <p>{data.fields.subTitle2}</p>
+                       <p key={data.key}>{data.fields.subTitle2}</p>
                       ))}
                    
                      
@@ -62,7 +62,7 @@ export default function ContactUs({content, addressContent}:any) {
                           >
                                       {content.map((data:any,index:number)=>(
                       data.fields.serviceList.map((serviceItem:any,index:number)=>(
-                        <div className={styles.chip}>
+                        <div key={data.key} className={styles.chip}>
                         <label>
                           <span>{serviceItem}</span>
                         </label>
@@ -108,7 +108,7 @@ export default function ContactUs({content, addressContent}:any) {
                             }}>
                           {content.map((data:any,index:number)=>(
                       data.fields.budgetList.map((budgetItem:any,index:number)=>(
-                        <div >
+                        <div key={data.key} >
                      
                         <input
                             type="radio"
@@ -216,7 +216,7 @@ export default function ContactUs({content, addressContent}:any) {
                   
                       <h3>Contact us</h3>
                       {addressContent.map((data:any,index:number)=>(
-                            <div className={styles.virtualAddress}>
+                            <div key={data.key} className={styles.virtualAddress}>
                             <a href="mailto:hello@studiodiseno.com">
                               E-mail: {data.fields.eMail}
                             </a>
@@ -229,7 +229,7 @@ export default function ContactUs({content, addressContent}:any) {
                         }}
                       ></div>
                            {addressContent.map((data:any,index:number)=>(
-                           <div className={styles.virtualAddress}>
+                           <div key={data.key} className={styles.virtualAddress}>
                            <a href="tel:+91 44 42632026">
                              Contact:{data.fields.phone}{" "}
                            </a>
@@ -239,7 +239,7 @@ export default function ContactUs({content, addressContent}:any) {
                    
                       <div className={styles.physicalAddress}>
                       {addressContent.map((data:any,index:number)=>(
-                       <h4>
+                       <h4   key={index}>
                    {data.fields.indianAddress}
                        <br></br> {data.fields.indianAddress2}
                      </h4>
@@ -251,7 +251,7 @@ export default function ContactUs({content, addressContent}:any) {
                       </div>
                       <div className={styles.physicalAddress}>
                       {addressContent.map((data:any,index:number)=>(
-                     <h4>
+                     <h4 key={data.key}>
                           {data.fields.usAddress}<br></br>
                           {data.fields.usAddress2}
                         </h4>
@@ -276,7 +276,7 @@ export default function ContactUs({content, addressContent}:any) {
 
             {/* <OurClients /> */}
             {addressContent.map((data:any,index:number)=>(
-                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
+                             <Footer key={index} contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
                         ))}
 
           </div>

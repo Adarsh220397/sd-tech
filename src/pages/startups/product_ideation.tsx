@@ -18,7 +18,7 @@ export default function ProductIdeation({productIdeationContent}:any) {
           <div className={styles.row}>
             <div className={styles.headerSectionRowColMd6}>
               {productIdeationContent.map((data:any,index:number)=>(
-    <div>
+    <div  key={data.key}>
     <Image
       src={'https:'+data.fields.image.fields.file.url}
       alt="productionideation"
@@ -37,7 +37,7 @@ export default function ProductIdeation({productIdeationContent}:any) {
               <div className={styles.servicesListDesc}>
                 <div className={styles.tabContentInner}>
                   {productIdeationContent.map((data:any,index:number)=>(
-    <div className={styles.tabContentInnerBlock}>
+    <div  key={data.key} className={styles.tabContentInnerBlock}>
     <h3>{data.fields.heading}</h3>
     <p>
     {data.fields.description}

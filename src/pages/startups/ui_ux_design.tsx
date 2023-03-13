@@ -20,7 +20,7 @@ export default function UIUXDesign({uiuxdesignContent}:any) {
               <div className={styles.servicesListDesc}>
               <div className={styles.tabContentInner}>
                 {uiuxdesignContent.map((data:any,index:number)=>(
-     <div className={styles.tabContentInnerBlock}>
+     <div key={data.key} className={styles.tabContentInnerBlock}>
      <h3>{data.fields.heading}</h3>
      <p>
      {data.fields.description}
@@ -42,7 +42,7 @@ export default function UIUXDesign({uiuxdesignContent}:any) {
             </div>
             <div className={styles.headerSectionRowColMd6}>
               {uiuxdesignContent.map((data:any)=>(
-      <div className={styles.servicesListImage}>
+      <div key = { data.key}className={styles.servicesListImage}>
       <Image
         src={'https:'+data.fields.image.fields.file.url}
         alt="uxdesign"

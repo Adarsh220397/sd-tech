@@ -37,6 +37,7 @@ export default function WorkMainIndex({
 
           {displayContent.map((data: any, index: number) => (
             <Work
+            key={index}
               title={data?.fields?.title}
               description={data?.fields?.homeScreenImageContent}
               backgroundImage={data?.fields?.backgroundImage.fields.file.url}
@@ -45,10 +46,11 @@ export default function WorkMainIndex({
   
           <ContentImagesOne  eCommerceContent={eCommerceContent} digiStrategyContent={digiStrategyContent}finseverContent={finseverContent}hrSolutionContent={hrSolutionContent}hrMarketPlaceContent={hrMarketPlaceContent}financeContent={financeContent} />
           {content.map((data: any, index: number) => (
-            <OurClients content={data?.fields?.appContent} />
+            <OurClients   key={index}content={data?.fields?.appContent} />
           ))}
           {addressContent.map((data: any, index: number) => (
             <Footer
+            key={index}
               contact={data.fields.phone}
               inAddress1={data.fields.indianAddress}
               inAddress2={data.fields.indianAddress2}
