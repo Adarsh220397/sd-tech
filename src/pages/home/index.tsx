@@ -15,7 +15,7 @@ import Loading from "@/app/loading";
 import OurWork from "./our_work";
 import VersionApp from "../whoWeAre/version_app";
 import { createClient } from "contentful";
-import{ homeScreenConstants,ourClientsConstants,footerConstants } from "../utils/constants/string_constants";
+import homeScreenConstants,{ ourClientsConstants,footerConstants } from "../utils/constants/string_constants";
 interface IProps {
   pageContent: string;
 }
