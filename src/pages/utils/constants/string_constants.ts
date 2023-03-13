@@ -4,7 +4,6 @@ const  homeScreenConstants= {
 
 }
 
-export default homeScreenConstants;
 export const ourClientsConstants =  {
     ourClientContent:'We’ve been grateful to work with a wide spectrum of clients from startups to Fortune 500 companies. Our creativity enables us to collaborate on different types of projects in varying domains from brand design to enterprise software.'
 }
@@ -15,9 +14,10 @@ export const ourClientsConstants =  {
      inAddress1:"No.108, Theyagaraya Road, T Nagar,",
     inAddress2:"Chennai - 17, India.",
     usAddress1:'186 Princeton Hightstown Rd, Bldg 3,',
-     usAddress2:"Suite 10, West Windsor, NJ 08550",
-
+    usAddress2:"Suite 10, West Windsor, NJ 08550",
+    
 }
 export {
     footerConstants
 }
+export default homeScreenConstants;

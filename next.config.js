@@ -7,7 +7,8 @@ const nextConfig = {
   reactStrictMode:false,
   images: {
     domains:['images.ctfassets.net']
-  }
+  },
+  pageExtensions: ['.tsx', '.jsx']
 }
 
 module.exports =  nextConfig
