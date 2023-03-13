@@ -52,7 +52,7 @@ export default function WorkMainIndex({
               contact={data.fields.phone}
               inAddress1={data.fields.indianAddress}
               inAddress2={data.fields.indianAddress2}
-              mailId={data.fields.mail}
+              mailId={data.fields.eMail}
               usAddress1={data.fields.usAddress}
               usAddress2={data.fields.indianAddress2}
             />

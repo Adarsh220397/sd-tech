@@ -276,7 +276,7 @@ export default function ContactUs({content, addressContent}:any) {
 
             {/* <OurClients /> */}
             {addressContent.map((data:any,index:number)=>(
-                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.mail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
+                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
                         ))}
 
           </div>

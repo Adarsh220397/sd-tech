@@ -46,7 +46,7 @@ export default function WhoWeAreMainIndex({content,displayContent,addressContent
       <OurClients  content={data?.fields?.appContent}/>
   ))}
  {addressContent.map((data:any,index:number)=>(
-                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.mail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
+                             <Footer contact={data.fields.phone} inAddress1={data.fields.indianAddress}inAddress2={data.fields.indianAddress2}mailId={data.fields.eMail}usAddress1={data.fields.usAddress}usAddress2={data.fields.indianAddress2}/>
                         ))}
         </div>
       )}

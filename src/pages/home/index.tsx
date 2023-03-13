@@ -15,7 +15,7 @@ import Loading from "@/app/loading";
 import OurWork from "./our_work";
 import VersionApp from "../whoWeAre/version_app";
 import { createClient } from "contentful";
-
+import{ homeScreenConstants,ourClientsConstants,footerConstants } from "../utils/constants/string_constants";
 interface IProps {
   pageContent: string;
 }
@@ -67,13 +67,15 @@ export default function HomeIndex({pageContent}:IProps) {
           </p>
         ))}  */}
           <WhatWeDo />
-          {/* <VersionApp  /> */}
+
+          <VersionApp                heading={homeScreenConstants.firstVersionTitle}
+              versionAppContent={homeScreenConstants.firstVersionContent} />
           {/* {content.map((data:any, index: number)=>(
       <OurClients  content={data?.fields?.appContent}/>
   ))} */}
 
-<OurClients  content={pageContent}/>
-          {/* <Footer /> */}
+<OurClients  content={ourClientsConstants.ourClientContent}/>
+          <Footer contact={footerConstants.contact} inAddress1={footerConstants.inAddress1} inAddress2={footerConstants.inAddress2}usAddress1={footerConstants.usAddress1} usAddress2={footerConstants.usAddress2}mailId={footerConstants.mailId}/>
         </div>
       )}
     </>
